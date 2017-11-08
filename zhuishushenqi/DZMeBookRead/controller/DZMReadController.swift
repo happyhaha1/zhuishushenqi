@@ -43,6 +43,9 @@ class DZMReadController: DZMViewController,DZMReadMenuDelegate,DZMCoverControlle
         
         // 初始化控制器
         creatPageController(readOperation.GetCurrentReadViewController(isUpdateFont: true, isSave: true))
+        
+//        self.navigationController?.isNavigationBarHidden = true
+
     }
     
     // MARK: -- DZMReadMenuDelegate
