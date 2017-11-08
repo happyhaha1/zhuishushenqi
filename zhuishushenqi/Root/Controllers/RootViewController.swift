@@ -223,7 +223,9 @@ extension RootViewController:UITableViewDataSource,UITableViewDelegate{
         let book = self.bookShelfArr![indexPath.row]
         var readChapterListModels:[DZMReadChapterListModel] = []
 
+        var i = 0;
         for chapter in book.chapters! {
+            i = i + 1
             // 创建章节内容模型
             let readChapterModel = DZMReadChapterModel()
             
@@ -231,8 +233,8 @@ extension RootViewController:UITableViewDataSource,UITableViewDelegate{
             readChapterModel.bookID = book._id
             
             // 章节ID
-            readChapterModel.id = "1"
-            
+            readChapterModel.id = "\(i)"
+            QSLog("\(chapter)")
             // 章节名
             readChapterModel.name = chapter["title"] as! String
 //            QSLog("\(chapter["link"])")
@@ -255,7 +257,7 @@ extension RootViewController:UITableViewDataSource,UITableViewDelegate{
         let readModel: DZMReadModel = DZMReadModel.readModel(bookID: book._id)
 
         readModel.readChapterListModels = readChapterListModels
-        readModel.modifyReadRecordModel(chapterID: readModel.readChapterListModels.first!.id)
+        readModel.modifyReadRecordModel(chapterID: "1")
 
         let readController = DZMReadController()
         readController.readModel = readModel
