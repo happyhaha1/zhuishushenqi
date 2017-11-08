@@ -64,7 +64,7 @@ class QSIntroduceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let horizonalVC = QSHorizonalTableViewController(style: .plain)
+        let horizonalVC = QSHorizonalTableViewController(style: .grouped)
         horizonalVC.completion = completion
         horizonalVC.scrollViewDidScroll = { (contentOffset) in
             self.qs_scrollViewDidScroll(contentOffset: contentOffset)
@@ -120,7 +120,7 @@ class QSHorizonalTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView = UITableView(frame: UIScreen.main.bounds)
+        self.tableView = UITableView()
         self.tableView.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/2)
         self.tableView.isPagingEnabled = true
         self.tableView.bounces = false
@@ -135,13 +135,13 @@ class QSHorizonalTableViewController: UITableViewController {
         if #available(iOS 11.0, *) {
             
             self.tableView.contentInsetAdjustmentBehavior = .never
-            
+
             self.tableView.estimatedRowHeight = 0
-            
+
             self.tableView.estimatedSectionHeaderHeight = 0
-            
+
             self.tableView.estimatedSectionFooterHeight = 0
-        
+            
             
         }
     }
@@ -166,7 +166,6 @@ class QSHorizonalTableViewController: UITableViewController {
             
             cell?.noAccountCompletion = {
                 self.scrollEnable = true
-                QSLog("tableview:\(self.tableView.contentOffset.x)")
                 self.tableView.setContentOffset(CGPoint(x: self.tableView.contentOffset.x, y: self.view.bounds.height*CGFloat(self.totalPages-1)), animated: true)
                 self.tableView.isScrollEnabled = false
             }
@@ -210,7 +209,6 @@ class QSHorizonalTableViewController: UITableViewController {
     }
     
     override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        QSLog("scrollViewDidScroll:\(scrollView.contentOffset)")
         let offsetY = scrollView.contentOffset.y
         if !scrollEnable {
             if offsetY >= self.view.bounds.height*CGFloat(totalPages-2) {

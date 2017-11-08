@@ -21,15 +21,14 @@ extension RootViewController{
     }
     
     fileprivate func setupSegMenu(){
-        segMenu = SegMenu(frame: CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: 40), WithTitles: ["追书架","追书社区"])
+        segMenu = SegMenu(frame: CGRect(x: 0, y: kNavibarH, width: UIScreen.main.bounds.size.width, height: 40), WithTitles: ["追书架","追书社区"])
         segMenu.menuDelegate = self
         self.view.addSubview(segMenu)
     }
     
     fileprivate func setupCommunityView() -> Void {
         communityView = CommunityView()
-        
-        communityView.frame = CGRect(x: 0, y: 104, width: ScreenWidth, height: ScreenHeight - 104)
+        communityView.frame = CGRect(x: 0, y: kNavibarH + self.segMenu.bounds.maxY, width: ScreenWidth, height: ScreenHeight - kNavibarH + self.segMenu.bounds.maxY)
         communityView.delegate = self
         communityView.isHidden = true
         self.view.addSubview(communityView)
@@ -37,14 +36,14 @@ extension RootViewController{
     
     fileprivate func setupBookSheldLB(){
         bookShelfLB = UILabel()
-        bookShelfLB.frame = CGRect(x: 5,y: 0,width: ScreenWidth - 10,height: 44)
+        bookShelfLB.frame = CGRect(x: 5,y: 0,width: ScreenWidth - 10,height: 20)
         bookShelfLB.textColor = UIColor.gray
         bookShelfLB.font = UIFont.systemFont(ofSize: 13)
         bookShelfLB.textAlignment = .center
     }
     
     fileprivate func setupTableView(){
-        self.tableView.frame = CGRect(x: 0, y: 104, width: ScreenWidth, height: ScreenHeight - 104)
+        self.tableView.frame = CGRect(x: 0, y: kNavibarH + self.segMenu.bounds.maxY, width: ScreenWidth, height: ScreenHeight - kNavibarH + self.segMenu.bounds.maxY)
         self.view.addSubview(self.tableView)
     }
     

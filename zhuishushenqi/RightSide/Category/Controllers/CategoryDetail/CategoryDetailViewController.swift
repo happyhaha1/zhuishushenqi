@@ -21,7 +21,7 @@ class CategoryDetailViewController: BaseViewController ,SegMenuDelegate,UITableV
     private var headerModel:TopicDetailHeader?
     
     private lazy var tableView:UITableView = {
-        let tableView = UITableView(frame: CGRect(x: 0, y: 104, width: ScreenWidth, height: ScreenHeight - 104), style: .grouped)
+        let tableView = UITableView(frame: CGRect(x: 0, y: kNavibarH + 40, width: ScreenWidth, height: ScreenHeight - kNavibarH - 40), style: .grouped)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.sectionHeaderHeight = CGFloat.leastNormalMagnitude
@@ -44,7 +44,7 @@ class CategoryDetailViewController: BaseViewController ,SegMenuDelegate,UITableV
     }
     
     func initSubview(){
-        let segView = SegMenu(frame: CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: 40), WithTitles: ["新书","热度","口碑","完结"])
+        let segView = SegMenu(frame: CGRect(x: 0, y: kNavibarH, width: UIScreen.main.bounds.size.width, height: 40), WithTitles: ["新书","热度","口碑","完结"])
         segView.menuDelegate = self
         view.addSubview(segView)
     }

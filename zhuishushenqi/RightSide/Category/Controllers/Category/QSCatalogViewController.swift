@@ -21,13 +21,25 @@ class QSCatalogViewController: BaseViewController ,UITableViewDataSource,UITable
     fileprivate var female:NSArray? = []
     
     fileprivate lazy var tableView:UITableView = {
-        let tableView = UITableView(frame: CGRect(x: 0, y: 64, width: ScreenWidth, height: ScreenHeight - 64), style: .grouped)
+        let tableView = UITableView(frame: CGRect(x: 0, y: kNavibarH, width: ScreenWidth, height: ScreenHeight - kNavibarH), style: .grouped)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.sectionHeaderHeight = 50
         tableView.sectionFooterHeight = 10
         tableView.rowHeight = 93
         tableView.qs_registerCellNib(CategoryCell.self)
+        if #available(iOS 11.0, *) {
+            
+            tableView.contentInsetAdjustmentBehavior = .never
+            
+            tableView.estimatedRowHeight = 0
+            
+            tableView.estimatedSectionHeaderHeight = 0
+            
+            tableView.estimatedSectionFooterHeight = 0
+            
+            
+        }
         return tableView
     }()
     override func viewDidLoad() {

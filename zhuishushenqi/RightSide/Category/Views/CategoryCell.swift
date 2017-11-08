@@ -23,7 +23,7 @@ class CategoryCell: UITableViewCell {
                     if let dict:NSDictionary = item as? NSDictionary {
                         let row = index/3
                         let col = index%3
-                        let width = self.bounds.width/3
+                        let width = UIScreen.main.bounds.width/3
                         let height:CGFloat = 60.00
                         let x = CGFloat(col)*width
                         let y = CGFloat(row)*height
@@ -43,7 +43,7 @@ class CategoryCell: UITableViewCell {
                 let types = models?.count ?? 0
                 let row = (types%3 == 0 ? types/3:types/3 + 1)
 
-                let width = self.bounds.width/3
+                let width = UIScreen.main.bounds.width/3
                 let height:CGFloat = 60.00
                 for index in 0..<2 {
                     let verticalLine = UILabel()
@@ -53,7 +53,7 @@ class CategoryCell: UITableViewCell {
                 }
                 for index in 0..<row - 1 {
                     let verticalLine = UILabel()
-                    verticalLine.frame = CGRect(x: 0, y: height*CGFloat(index + 1), width: self.bounds.width, height: 0.5)
+                    verticalLine.frame = CGRect(x: 0, y: height*CGFloat(index + 1), width: UIScreen.main.bounds.width, height: 0.5)
                     verticalLine.backgroundColor = UIColor(red: 0.78, green: 0.78, blue: 0.80, alpha: 1.0)
                     self.addSubview(verticalLine)
                 }

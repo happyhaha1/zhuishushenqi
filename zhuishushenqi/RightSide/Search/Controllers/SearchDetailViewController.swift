@@ -18,13 +18,13 @@ class SearchDetailViewController: BaseViewController,UITableViewDataSource,UITab
     let storeKey = "SearchHistory"
     var historyList:[String]?
     lazy var searchView:SearchView = {
-       let searchView = SearchView(frame: CGRect(x: 0, y: 108, width: ScreenWidth, height: ScreenHeight - 108))
+       let searchView = SearchView(frame: CGRect(x: 0, y: kNavibarH + 55, width: ScreenWidth, height: ScreenHeight - kNavibarH - 55))
         searchView.delegate = self
         return searchView
     }()
     
     fileprivate lazy var tableView:UITableView = {
-        let tableView = UITableView(frame: CGRect(x: 0, y:108, width: ScreenWidth, height: ScreenHeight - 108), style: .grouped)
+        let tableView = UITableView(frame: CGRect(x: 0, y: kNavibarH + 55, width: ScreenWidth, height: ScreenHeight - kNavibarH - 55), style: .grouped)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.sectionHeaderHeight = CGFloat.leastNormalMagnitude
@@ -116,7 +116,7 @@ class SearchDetailViewController: BaseViewController,UITableViewDataSource,UITab
         let bgView = UIView()
 //        [UIColor colorWithRed:0.94f green:0.94f blue:0.96f alpha:1.00f];
         bgView.backgroundColor = UIColor(red: 0.94, green: 0.94, blue: 0.96, alpha: 1.0)
-        bgView.frame = CGRect(x: 0, y: 64, width: self.view.bounds.width, height: 44)
+        bgView.frame = CGRect(x: 0, y: kNavibarH, width: self.view.bounds.width, height: 55)
         bgView.addSubview(self.searchController.searchBar)
         view.addSubview(bgView)
     }
@@ -135,14 +135,14 @@ class SearchDetailViewController: BaseViewController,UITableViewDataSource,UITab
     
     func willPresentSearchController(_ searchController: UISearchController){
         UIView.animate(withDuration: 0.35) {
-            self.searchView.frame = CGRect(x: 0, y: 64, width: ScreenWidth, height: ScreenHeight - 64)
+            self.searchView.frame = CGRect(x: 0, y: kNavibarH, width: ScreenWidth, height: ScreenHeight - kNavibarH)
             self.view.addSubview(self.searchView)
         }
     }
     
     func willDismissSearchController(_ searchController: UISearchController) {
         UIView.animate(withDuration: 0.35) {
-            self.searchView.frame = CGRect(x: 0, y: 108, width: ScreenWidth, height: ScreenHeight - 108)
+            self.searchView.frame = CGRect(x: 0, y: kNavibarH + 55, width: ScreenWidth, height: ScreenHeight - kNavibarH - 55)
         }
     }
     

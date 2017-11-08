@@ -19,7 +19,7 @@ class QSCategoryyViewController: BaseViewController ,UITableViewDataSource,UITab
     fileprivate var female:NSArray? = []
     
     fileprivate lazy var tableView:UITableView = {
-        let tableView = UITableView(frame: CGRect(x: 0, y: 64, width: ScreenWidth, height: ScreenHeight - 64), style: .grouped)
+        let tableView = UITableView(frame: CGRect(x: 0, y: kNavibarH, width: ScreenWidth, height: ScreenHeight - kNavibarH), style: .grouped)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.sectionHeaderHeight = 50

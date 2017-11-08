@@ -64,7 +64,7 @@ class RightViewController: UITableViewController {
             self.navigationItem.backBarButtonItem?.tintColor = UIColor ( red: 0.7235, green: 0.0, blue: 0.1146, alpha: 1.0 )
             SideVC.navigationController?.pushViewController(QSSearchRouter.createModule(), animated: true)
         }else if indexPath.row == 1 {//排行榜
-//            let rankVC = RankingViewController()
+//            let rankVC = RankingViewController()a
             self.navigationItem.backBarButtonItem?.tintColor = UIColor ( red: 0.7235, green: 0.0, blue: 0.1146, alpha: 1.0 )
             SideVC.navigationController?.pushViewController(QSRankRouter.createModule(), animated: true)
         }else if indexPath.row == 2 {//主题书单
