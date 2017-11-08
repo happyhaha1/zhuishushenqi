@@ -389,3 +389,31 @@ let kNavibarH: CGFloat = IPHONEX ? 88.0 : 64.0
 let kTabbarH: CGFloat = IPHONEX ? 49.0+34.0 : 49.0
 
 let kStatusbarH:CGFloat = IPHONEX ? 44.0 : 20.0
+
+func ContentTypesetting(content:String) ->String {
+    
+    // 替换单换行
+    var content = content.replacingOccurrences(of: "\r", with: "")
+    
+    // 替换换行 以及 多个换行 为 换行加空格
+    content = content.replacingCharacters(pattern: "\\s*\\n+\\s*", template: "\n　　")
+    
+    // 返回
+    return content
+}
+
+
+func GetReadChapterListModel(readChapterModel:DZMReadChapterModel) ->DZMReadChapterListModel {
+    
+    let readChapterListModel = DZMReadChapterListModel()
+    
+    readChapterListModel.bookID = readChapterModel.bookID
+    
+    readChapterListModel.id = readChapterModel.id
+    
+    readChapterListModel.name = readChapterModel.name
+    
+    readChapterListModel.priority = readChapterModel.priority
+    
+    return readChapterListModel
+}

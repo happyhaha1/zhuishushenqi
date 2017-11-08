@@ -19,6 +19,8 @@ class DZMReadViewController: UIViewController,UITableViewDelegate,UITableViewDat
     /// 顶部状态栏
     private(set) var topStatusView:UILabel!
     
+    var isHidden: Bool = true
+    
     /// 底部状态栏
     private(set) var bottomStatusView:DZMRMStatusView!
     
@@ -43,6 +45,8 @@ class DZMReadViewController: UIViewController,UITableViewDelegate,UITableViewDat
         
         // 配置阅读记录
         configureReadRecordModel()
+        isHidden = true
+        self.setNeedsStatusBarAppearanceUpdate()
     }
     
     /// 创建UI
@@ -351,6 +355,11 @@ class DZMReadViewController: UIViewController,UITableViewDelegate,UITableViewDat
     override func didReceiveMemoryWarning() {
         
         super.didReceiveMemoryWarning()
+    }
+    
+    //隐藏状态栏
+    override var prefersStatusBarHidden: Bool {
+        return isHidden
     }
     
     deinit {

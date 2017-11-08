@@ -219,19 +219,48 @@ extension RootViewController:UITableViewDataSource,UITableViewDelegate{
 //        self.present(QSTextRouter.createModule(bookDetail:self.bookShelfArr![indexPath.row],callback: { (book:BookDetail) in
 //            self.updateShelfArr(book: book)
 //        }), animated: true, completion: nil)
-        let url = Bundle.main.url(forResource: "求魔", withExtension: "txt")
-        
-        
-        DZMReadParser.ParserLocalURL(url: url!) {[weak self] (readModel) in
+//        QSLog("\(.chapters)")
+        let book = self.bookShelfArr![indexPath.row]
+        var readChapterListModels:[DZMReadChapterListModel] = []
+
+        for chapter in book.chapters! {
+            // 创建章节内容模型
+            let readChapterModel = DZMReadChapterModel()
             
+            // 书ID
+            readChapterModel.bookID = book._id
             
+            // 章节ID
+            readChapterModel.id = "1"
             
-            let readController = DZMReadController()
+            // 章节名
+            readChapterModel.name = chapter["title"] as! String
+//            QSLog("\(chapter["link"])")
+            // 优先级
+            readChapterModel.priority = NSNumber(value: 0)
             
-            readController.readModel = readModel
+            // 内容
+            readChapterModel.content = ContentTypesetting(content: "asdfasdfasdfasdfas ssss")
             
-            self?.navigationController?.pushViewController(readController, animated: true)
+            // 分页
+            readChapterModel.updateFont()
+            
+            // 添加章节列表模型
+            readChapterListModels.append(GetReadChapterListModel(readChapterModel: readChapterModel))
+            
+            // 保存
+            readChapterModel.save()
         }
+        
+        let readModel: DZMReadModel = DZMReadModel.readModel(bookID: book._id)
+
+        readModel.readChapterListModels = readChapterListModels
+        readModel.modifyReadRecordModel(chapterID: readModel.readChapterListModels.first!.id)
+
+        let readController = DZMReadController()
+        readController.readModel = readModel
+        self.navigationController?.pushViewController(readController, animated: true)
+
     }
     
     func updateShelfArr(book:BookDetail){
