@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         splash.show {
             // 新版本特性
             let firstRun = USER_DEFAULTS.object(forKey: "FIRSTRUN") as? Bool
-            if firstRun == nil {
+            if firstRun != nil {
                 USER_DEFAULTS.set(false, forKey: "FIRSTRUN")
                 let introduce = QSIntroducePage()
                 introduce.show(completion: {

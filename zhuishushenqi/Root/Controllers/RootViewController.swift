@@ -15,7 +15,7 @@ let AllChapterUrl = "http://api.zhuishushenqi.com/ctoc/57df797cb061df9e19b8b030"
 
 class RootViewController: UIViewController {
     let kHeaderViewHeight:CGFloat = 5
-    fileprivate let kHeaderBigHeight:CGFloat = 44
+    fileprivate let kHeaderBigHeight:CGFloat = 88
     fileprivate let kCellHeight:CGFloat = 60
 
     var bookShelfArr:[BookDetail]?
