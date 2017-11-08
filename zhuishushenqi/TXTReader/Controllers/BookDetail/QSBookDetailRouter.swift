@@ -33,9 +33,23 @@ class QSBookDetailRouter: QSBookDetailWireframeProtocol {
 //        viewController?.navigationController?.pushViewController(QSTextRouter.createModule(bookDetail:booDetail,callback: {(book:BookDetail) in
 //            
 //        }), animated: true)
-        viewController?.present(QSTextRouter.createModule(bookDetail:booDetail,callback: {(book:BookDetail) in
+
+        let url = Bundle.main.url(forResource: "求魔", withExtension: "txt")
         
-        }), animated: true, completion: nil)
+        
+        DZMReadParser.ParserLocalURL(url: url!) {[weak self] (readModel) in
+            
+            
+            
+            let readController = DZMReadController()
+            
+            readController.readModel = readModel
+            
+            self?.viewController?.navigationController?.pushViewController(readController, animated: true)
+        }
+//        viewController?.present(QSTextRouter.createModule(bookDetail:booDetail,callback: {(book:BookDetail) in
+//
+//        }), animated: true, completion: nil)
     }
     
     func presentComment(model:BookComment){

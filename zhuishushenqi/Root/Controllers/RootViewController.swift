@@ -216,9 +216,22 @@ extension RootViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        self.present(QSTextRouter.createModule(bookDetail:self.bookShelfArr![indexPath.row],callback: { (book:BookDetail) in
-            self.updateShelfArr(book: book)
-        }), animated: true, completion: nil)
+//        self.present(QSTextRouter.createModule(bookDetail:self.bookShelfArr![indexPath.row],callback: { (book:BookDetail) in
+//            self.updateShelfArr(book: book)
+//        }), animated: true, completion: nil)
+        let url = Bundle.main.url(forResource: "求魔", withExtension: "txt")
+        
+        
+        DZMReadParser.ParserLocalURL(url: url!) {[weak self] (readModel) in
+            
+            
+            
+            let readController = DZMReadController()
+            
+            readController.readModel = readModel
+            
+            self?.navigationController?.pushViewController(readController, animated: true)
+        }
     }
     
     func updateShelfArr(book:BookDetail){

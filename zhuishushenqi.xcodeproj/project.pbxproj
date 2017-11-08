@@ -8,6 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		48103378801B43EB177B7D8A /* Pods_zhuishushenqi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D606ED88FDF674D404EC160E /* Pods_zhuishushenqi.framework */; };
+		794BEDC31FB31CCD00A50874 /* 求魔.txt in Resources */ = {isa = PBXBuildFile; fileRef = 794BEDC01FB31CCC00A50874 /* 求魔.txt */; };
+		794BEE041FB31EA500A50874 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDC81FB31EA500A50874 /* UIDevice+Extension.swift */; };
+		794BEE051FB31EA500A50874 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDC91FB31EA500A50874 /* NSObject+Extension.swift */; };
+		794BEE061FB31EA500A50874 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDCA1FB31EA500A50874 /* UIView+Extension.swift */; };
+		794BEE071FB31EA500A50874 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDCB1FB31EA500A50874 /* String+Extension.swift */; };
+		794BEE081FB31EA500A50874 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDCC1FB31EA500A50874 /* UIScrollView+Extension.swift */; };
+		794BEE091FB31EA500A50874 /* UIPageViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDCD1FB31EA500A50874 /* UIPageViewController+Extension.swift */; };
+		794BEE0A1FB31EA500A50874 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDCE1FB31EA500A50874 /* UITableView+Extension.swift */; };
+		794BEE0B1FB31EA500A50874 /* DZMSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDD01FB31EA500A50874 /* DZMSegmentedControl.swift */; };
+		794BEE0C1FB31EA500A50874 /* DZMHaloButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDD11FB31EA500A50874 /* DZMHaloButton.swift */; };
+		794BEE0D1FB31EA500A50874 /* DZMUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDD21FB31EA500A50874 /* DZMUserDefaults.swift */; };
+		794BEE0E1FB31EA500A50874 /* DZMGlobalMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDD41FB31EA500A50874 /* DZMGlobalMethod.swift */; };
+		794BEE0F1FB31EA500A50874 /* DZMGlobalProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDD51FB31EA500A50874 /* DZMGlobalProperty.swift */; };
+		794BEE101FB31EA500A50874 /* DZMCoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDD91FB31EA500A50874 /* DZMCoverController.m */; };
+		794BEE111FB31EA500A50874 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDDC1FB31EA500A50874 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		794BEE121FB31EA600A50874 /* ASValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDE01FB31EA500A50874 /* ASValuePopUpView.m */; };
+		794BEE131FB31EA600A50874 /* ASValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDE11FB31EA500A50874 /* ASValueTrackingSlider.m */; };
+		794BEE141FB31EA600A50874 /* UIView+YGPulseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDE31FB31EA500A50874 /* UIView+YGPulseView.m */; };
+		794BEE151FB31EA600A50874 /* DZMBatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDE51FB31EA500A50874 /* DZMBatteryView.swift */; };
+		794BEE161FB31EA600A50874 /* DZMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDE71FB31EA500A50874 /* DZMViewController.swift */; };
+		794BEE171FB31EA600A50874 /* DZMReadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDE91FB31EA500A50874 /* DZMReadOperation.swift */; };
+		794BEE181FB31EA600A50874 /* DZMReadParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDEA1FB31EA500A50874 /* DZMReadParser.swift */; };
+		794BEE191FB31EA600A50874 /* DZMReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDEB1FB31EA500A50874 /* DZMReadViewController.swift */; };
+		794BEE1A1FB31EA600A50874 /* DZMReadConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDEC1FB31EA500A50874 /* DZMReadConfigure.swift */; };
+		794BEE1B1FB31EA600A50874 /* DZMReadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDED1FB31EA500A50874 /* DZMReadController.swift */; };
+		794BEE1C1FB31EA600A50874 /* DZMRMColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDF01FB31EA500A50874 /* DZMRMColorView.swift */; };
+		794BEE1D1FB31EA600A50874 /* DZMRMSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDF11FB31EA500A50874 /* DZMRMSettingView.swift */; };
+		794BEE1E1FB31EA600A50874 /* DZMRMFuncView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDF21FB31EA500A50874 /* DZMRMFuncView.swift */; };
+		794BEE1F1FB31EA600A50874 /* DZMRMBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDF31FB31EA500A50874 /* DZMRMBottomView.swift */; };
+		794BEE201FB31EA600A50874 /* DZMRMStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDF41FB31EA500A50874 /* DZMRMStatusView.swift */; };
+		794BEE211FB31EA600A50874 /* DZMRMLeftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDF51FB31EA500A50874 /* DZMRMLeftView.swift */; };
+		794BEE221FB31EA600A50874 /* DZMReadMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDF61FB31EA500A50874 /* DZMReadMenu.swift */; };
+		794BEE231FB31EA600A50874 /* DZMRMTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDF71FB31EA500A50874 /* DZMRMTopView.swift */; };
+		794BEE241FB31EA600A50874 /* DZMRMBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDF81FB31EA500A50874 /* DZMRMBaseView.swift */; };
+		794BEE251FB31EA600A50874 /* DZMRMLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDF91FB31EA500A50874 /* DZMRMLightView.swift */; };
+		794BEE261FB31EA600A50874 /* DZMReadRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDFB1FB31EA500A50874 /* DZMReadRecordModel.swift */; };
+		794BEE271FB31EA600A50874 /* DZMReadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDFC1FB31EA500A50874 /* DZMReadModel.swift */; };
+		794BEE281FB31EA600A50874 /* DZMReadChapterListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDFD1FB31EA500A50874 /* DZMReadChapterListModel.swift */; };
+		794BEE291FB31EA600A50874 /* DZMReadMarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDFE1FB31EA500A50874 /* DZMReadMarkModel.swift */; };
+		794BEE2A1FB31EA600A50874 /* DZMReadChapterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDFF1FB31EA500A50874 /* DZMReadChapterModel.swift */; };
+		794BEE2B1FB31EA600A50874 /* DZMReadViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEE011FB31EA500A50874 /* DZMReadViewCell.swift */; };
+		794BEE2C1FB31EA600A50874 /* DZMReadViewUDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEE021FB31EA500A50874 /* DZMReadViewUDCell.swift */; };
+		794BEE2D1FB31EA600A50874 /* DZMReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEE031FB31EA500A50874 /* DZMReadView.swift */; };
 		7963720A1FB2C52900D576E4 /* QSPullToRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B278AAE41F3967A4000A0D55 /* QSPullToRefresh.framework */; };
 		7963720B1FB2C53D00D576E4 /* QSPullToRefresh.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B278AAE41F3967A4000A0D55 /* QSPullToRefresh.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B200D1FF1EEDB1FE003A42E3 /* QSIntroduceReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B200D1FD1EEDB1FE003A42E3 /* QSIntroduceReadCell.swift */; };
@@ -302,6 +345,55 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		794BEDC01FB31CCC00A50874 /* 求魔.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "求魔.txt"; sourceTree = "<group>"; };
+		794BEDC61FB31EA500A50874 /* DZMeBookRead-Bridging-Pch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DZMeBookRead-Bridging-Pch.h"; sourceTree = "<group>"; };
+		794BEDC81FB31EA500A50874 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		794BEDC91FB31EA500A50874 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		794BEDCA1FB31EA500A50874 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		794BEDCB1FB31EA500A50874 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		794BEDCC1FB31EA500A50874 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
+		794BEDCD1FB31EA500A50874 /* UIPageViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPageViewController+Extension.swift"; sourceTree = "<group>"; };
+		794BEDCE1FB31EA500A50874 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		794BEDD01FB31EA500A50874 /* DZMSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMSegmentedControl.swift; sourceTree = "<group>"; };
+		794BEDD11FB31EA500A50874 /* DZMHaloButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMHaloButton.swift; sourceTree = "<group>"; };
+		794BEDD21FB31EA500A50874 /* DZMUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMUserDefaults.swift; sourceTree = "<group>"; };
+		794BEDD41FB31EA500A50874 /* DZMGlobalMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMGlobalMethod.swift; sourceTree = "<group>"; };
+		794BEDD51FB31EA500A50874 /* DZMGlobalProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMGlobalProperty.swift; sourceTree = "<group>"; };
+		794BEDD81FB31EA500A50874 /* DZMCoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZMCoverController.h; sourceTree = "<group>"; };
+		794BEDD91FB31EA500A50874 /* DZMCoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZMCoverController.m; sourceTree = "<group>"; };
+		794BEDDB1FB31EA500A50874 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		794BEDDC1FB31EA500A50874 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		794BEDDE1FB31EA500A50874 /* ASValuePopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValuePopUpView.h; sourceTree = "<group>"; };
+		794BEDDF1FB31EA500A50874 /* ASValueTrackingSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValueTrackingSlider.h; sourceTree = "<group>"; };
+		794BEDE01FB31EA500A50874 /* ASValuePopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValuePopUpView.m; sourceTree = "<group>"; };
+		794BEDE11FB31EA500A50874 /* ASValueTrackingSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValueTrackingSlider.m; sourceTree = "<group>"; };
+		794BEDE31FB31EA500A50874 /* UIView+YGPulseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YGPulseView.m"; sourceTree = "<group>"; };
+		794BEDE41FB31EA500A50874 /* UIView+YGPulseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YGPulseView.h"; sourceTree = "<group>"; };
+		794BEDE51FB31EA500A50874 /* DZMBatteryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMBatteryView.swift; sourceTree = "<group>"; };
+		794BEDE71FB31EA500A50874 /* DZMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMViewController.swift; sourceTree = "<group>"; };
+		794BEDE91FB31EA500A50874 /* DZMReadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadOperation.swift; sourceTree = "<group>"; };
+		794BEDEA1FB31EA500A50874 /* DZMReadParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadParser.swift; sourceTree = "<group>"; };
+		794BEDEB1FB31EA500A50874 /* DZMReadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadViewController.swift; sourceTree = "<group>"; };
+		794BEDEC1FB31EA500A50874 /* DZMReadConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadConfigure.swift; sourceTree = "<group>"; };
+		794BEDED1FB31EA500A50874 /* DZMReadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadController.swift; sourceTree = "<group>"; };
+		794BEDF01FB31EA500A50874 /* DZMRMColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMColorView.swift; sourceTree = "<group>"; };
+		794BEDF11FB31EA500A50874 /* DZMRMSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMSettingView.swift; sourceTree = "<group>"; };
+		794BEDF21FB31EA500A50874 /* DZMRMFuncView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMFuncView.swift; sourceTree = "<group>"; };
+		794BEDF31FB31EA500A50874 /* DZMRMBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMBottomView.swift; sourceTree = "<group>"; };
+		794BEDF41FB31EA500A50874 /* DZMRMStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMStatusView.swift; sourceTree = "<group>"; };
+		794BEDF51FB31EA500A50874 /* DZMRMLeftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMLeftView.swift; sourceTree = "<group>"; };
+		794BEDF61FB31EA500A50874 /* DZMReadMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadMenu.swift; sourceTree = "<group>"; };
+		794BEDF71FB31EA500A50874 /* DZMRMTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMTopView.swift; sourceTree = "<group>"; };
+		794BEDF81FB31EA500A50874 /* DZMRMBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMBaseView.swift; sourceTree = "<group>"; };
+		794BEDF91FB31EA500A50874 /* DZMRMLightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMRMLightView.swift; sourceTree = "<group>"; };
+		794BEDFB1FB31EA500A50874 /* DZMReadRecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadRecordModel.swift; sourceTree = "<group>"; };
+		794BEDFC1FB31EA500A50874 /* DZMReadModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadModel.swift; sourceTree = "<group>"; };
+		794BEDFD1FB31EA500A50874 /* DZMReadChapterListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadChapterListModel.swift; sourceTree = "<group>"; };
+		794BEDFE1FB31EA500A50874 /* DZMReadMarkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadMarkModel.swift; sourceTree = "<group>"; };
+		794BEDFF1FB31EA500A50874 /* DZMReadChapterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadChapterModel.swift; sourceTree = "<group>"; };
+		794BEE011FB31EA500A50874 /* DZMReadViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadViewCell.swift; sourceTree = "<group>"; };
+		794BEE021FB31EA500A50874 /* DZMReadViewUDCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadViewUDCell.swift; sourceTree = "<group>"; };
+		794BEE031FB31EA500A50874 /* DZMReadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadView.swift; sourceTree = "<group>"; };
 		B08901F972525F29A370AA86 /* Pods-zhuishushenqi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhuishushenqi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zhuishushenqi/Pods-zhuishushenqi.debug.xcconfig"; sourceTree = "<group>"; };
 		B200D1FD1EEDB1FE003A42E3 /* QSIntroduceReadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QSIntroduceReadCell.swift; sourceTree = "<group>"; };
 		B200D1FE1EEDB1FE003A42E3 /* QSIntroduceReadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QSIntroduceReadCell.xib; sourceTree = "<group>"; };
@@ -611,6 +703,181 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		794BEDC41FB31EA500A50874 /* DZMeBookRead */ = {
+			isa = PBXGroup;
+			children = (
+				794BEDC51FB31EA500A50874 /* other */,
+				794BEDE81FB31EA500A50874 /* controller */,
+				794BEDEE1FB31EA500A50874 /* menuUI */,
+				794BEDFA1FB31EA500A50874 /* model */,
+				794BEE001FB31EA500A50874 /* view */,
+			);
+			path = DZMeBookRead;
+			sourceTree = "<group>";
+		};
+		794BEDC51FB31EA500A50874 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				794BEDC61FB31EA500A50874 /* DZMeBookRead-Bridging-Pch.h */,
+				794BEDC71FB31EA500A50874 /* extension */,
+				794BEDCF1FB31EA500A50874 /* custom */,
+				794BEDD31FB31EA500A50874 /* global */,
+				794BEDD61FB31EA500A50874 /* thirdParty */,
+				794BEDE61FB31EA500A50874 /* base */,
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
+		794BEDC71FB31EA500A50874 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				794BEDC81FB31EA500A50874 /* UIDevice+Extension.swift */,
+				794BEDC91FB31EA500A50874 /* NSObject+Extension.swift */,
+				794BEDCA1FB31EA500A50874 /* UIView+Extension.swift */,
+				794BEDCB1FB31EA500A50874 /* String+Extension.swift */,
+				794BEDCC1FB31EA500A50874 /* UIScrollView+Extension.swift */,
+				794BEDCD1FB31EA500A50874 /* UIPageViewController+Extension.swift */,
+				794BEDCE1FB31EA500A50874 /* UITableView+Extension.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		794BEDCF1FB31EA500A50874 /* custom */ = {
+			isa = PBXGroup;
+			children = (
+				794BEDD01FB31EA500A50874 /* DZMSegmentedControl.swift */,
+				794BEDD11FB31EA500A50874 /* DZMHaloButton.swift */,
+				794BEDD21FB31EA500A50874 /* DZMUserDefaults.swift */,
+			);
+			path = custom;
+			sourceTree = "<group>";
+		};
+		794BEDD31FB31EA500A50874 /* global */ = {
+			isa = PBXGroup;
+			children = (
+				794BEDD41FB31EA500A50874 /* DZMGlobalMethod.swift */,
+				794BEDD51FB31EA500A50874 /* DZMGlobalProperty.swift */,
+			);
+			path = global;
+			sourceTree = "<group>";
+		};
+		794BEDD61FB31EA500A50874 /* thirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				794BEDD71FB31EA500A50874 /* DZMCoverController */,
+				794BEDDA1FB31EA500A50874 /* FDFullscreenPopGesture */,
+				794BEDDD1FB31EA500A50874 /* ASValueTrackingSlider */,
+				794BEDE21FB31EA500A50874 /* YGPulseView */,
+				794BEDE51FB31EA500A50874 /* DZMBatteryView.swift */,
+			);
+			path = thirdParty;
+			sourceTree = "<group>";
+		};
+		794BEDD71FB31EA500A50874 /* DZMCoverController */ = {
+			isa = PBXGroup;
+			children = (
+				794BEDD81FB31EA500A50874 /* DZMCoverController.h */,
+				794BEDD91FB31EA500A50874 /* DZMCoverController.m */,
+			);
+			path = DZMCoverController;
+			sourceTree = "<group>";
+		};
+		794BEDDA1FB31EA500A50874 /* FDFullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				794BEDDB1FB31EA500A50874 /* UINavigationController+FDFullscreenPopGesture.h */,
+				794BEDDC1FB31EA500A50874 /* UINavigationController+FDFullscreenPopGesture.m */,
+			);
+			path = FDFullscreenPopGesture;
+			sourceTree = "<group>";
+		};
+		794BEDDD1FB31EA500A50874 /* ASValueTrackingSlider */ = {
+			isa = PBXGroup;
+			children = (
+				794BEDDE1FB31EA500A50874 /* ASValuePopUpView.h */,
+				794BEDDF1FB31EA500A50874 /* ASValueTrackingSlider.h */,
+				794BEDE01FB31EA500A50874 /* ASValuePopUpView.m */,
+				794BEDE11FB31EA500A50874 /* ASValueTrackingSlider.m */,
+			);
+			path = ASValueTrackingSlider;
+			sourceTree = "<group>";
+		};
+		794BEDE21FB31EA500A50874 /* YGPulseView */ = {
+			isa = PBXGroup;
+			children = (
+				794BEDE31FB31EA500A50874 /* UIView+YGPulseView.m */,
+				794BEDE41FB31EA500A50874 /* UIView+YGPulseView.h */,
+			);
+			path = YGPulseView;
+			sourceTree = "<group>";
+		};
+		794BEDE61FB31EA500A50874 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				794BEDE71FB31EA500A50874 /* DZMViewController.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		794BEDE81FB31EA500A50874 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				794BEDE91FB31EA500A50874 /* DZMReadOperation.swift */,
+				794BEDEA1FB31EA500A50874 /* DZMReadParser.swift */,
+				794BEDEB1FB31EA500A50874 /* DZMReadViewController.swift */,
+				794BEDEC1FB31EA500A50874 /* DZMReadConfigure.swift */,
+				794BEDED1FB31EA500A50874 /* DZMReadController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		794BEDEE1FB31EA500A50874 /* menuUI */ = {
+			isa = PBXGroup;
+			children = (
+				794BEDEF1FB31EA500A50874 /* DZMRMSettingView */,
+				794BEDF31FB31EA500A50874 /* DZMRMBottomView.swift */,
+				794BEDF41FB31EA500A50874 /* DZMRMStatusView.swift */,
+				794BEDF51FB31EA500A50874 /* DZMRMLeftView.swift */,
+				794BEDF61FB31EA500A50874 /* DZMReadMenu.swift */,
+				794BEDF71FB31EA500A50874 /* DZMRMTopView.swift */,
+				794BEDF81FB31EA500A50874 /* DZMRMBaseView.swift */,
+				794BEDF91FB31EA500A50874 /* DZMRMLightView.swift */,
+			);
+			path = menuUI;
+			sourceTree = "<group>";
+		};
+		794BEDEF1FB31EA500A50874 /* DZMRMSettingView */ = {
+			isa = PBXGroup;
+			children = (
+				794BEDF01FB31EA500A50874 /* DZMRMColorView.swift */,
+				794BEDF11FB31EA500A50874 /* DZMRMSettingView.swift */,
+				794BEDF21FB31EA500A50874 /* DZMRMFuncView.swift */,
+			);
+			path = DZMRMSettingView;
+			sourceTree = "<group>";
+		};
+		794BEDFA1FB31EA500A50874 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				794BEDFB1FB31EA500A50874 /* DZMReadRecordModel.swift */,
+				794BEDFC1FB31EA500A50874 /* DZMReadModel.swift */,
+				794BEDFD1FB31EA500A50874 /* DZMReadChapterListModel.swift */,
+				794BEDFE1FB31EA500A50874 /* DZMReadMarkModel.swift */,
+				794BEDFF1FB31EA500A50874 /* DZMReadChapterModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		794BEE001FB31EA500A50874 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				794BEE011FB31EA500A50874 /* DZMReadViewCell.swift */,
+				794BEE021FB31EA500A50874 /* DZMReadViewUDCell.swift */,
+				794BEE031FB31EA500A50874 /* DZMReadView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		96FE9B86D6BF6F1F079B71F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -837,6 +1104,8 @@
 		B2B4B9F61E7EA4A8000CC201 /* zhuishushenqi */ = {
 			isa = PBXGroup;
 			children = (
+				794BEDC01FB31CCC00A50874 /* 求魔.txt */,
+				794BEDC41FB31EA500A50874 /* DZMeBookRead */,
 				B2B4BD781E7EE284000CC201 /* Client */,
 				B2B4B9F91E7EA4A8000CC201 /* Base */,
 				B2B4BA131E7EA4A8000CC201 /* Extension */,
@@ -1465,6 +1734,7 @@
 				B2B02E621EA9F54700A6880A /* QSBookListViewCell.xib in Resources */,
 				B278AA941F395FA4000A0D55 /* QSHelpViewCell.xib in Resources */,
 				B2B4BBF11E7EA4AB000CC201 /* Main.storyboard in Resources */,
+				794BEDC31FB31CCD00A50874 /* 求魔.txt in Resources */,
 				B2B4BC501E7EA4AB000CC201 /* UserfulCell.xib in Resources */,
 				B2B4BBF01E7EA4AB000CC201 /* LaunchScreen.storyboard in Resources */,
 				B2B4BC381E7EA4AB000CC201 /* Chapters.json in Resources */,
@@ -1579,17 +1849,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2B4BC481E7EA4AB000CC201 /* ChangeSourceCell.swift in Sources */,
+				794BEE121FB31EA600A50874 /* ASValuePopUpView.m in Sources */,
 				B2B4BC3C1E7EA4AB000CC201 /* UpdateInfo.swift in Sources */,
 				B2B4BBEE1E7EA4AB000CC201 /* V2FPSLabel.swift in Sources */,
 				B2B4BC2E1E7EA4AB000CC201 /* PageViewController.swift in Sources */,
+				794BEE201FB31EA600A50874 /* DZMRMStatusView.swift in Sources */,
 				B2B4BC1C1E7EA4AB000CC201 /* ThemeTopicCell.swift in Sources */,
 				B2B4BBDE1E7EA4AB000CC201 /* AppDelegate.swift in Sources */,
 				B20D74161EED83690034516F /* QSLastIntroduceCell.swift in Sources */,
 				B2B4BBEC1E7EA4AB000CC201 /* LightView.swift in Sources */,
 				B2B02E2C1EA8505200A6880A /* QSTopicDetailPresenter.swift in Sources */,
 				B2583CBC1EA782C2004178F3 /* QSThemeTopicProtocols.swift in Sources */,
+				794BEE091FB31EA500A50874 /* UIPageViewController+Extension.swift in Sources */,
 				B278AA8F1F395F4F000A0D55 /* QSInterestedViewController.swift in Sources */,
 				B26286CA1EEA46DD005A1A8A /* QSIntroducePage.swift in Sources */,
+				794BEE171FB31EA600A50874 /* DZMReadOperation.swift in Sources */,
 				B22AC4591E9F6767008625E6 /* QSRankDetailProtoocol.swift in Sources */,
 				B22AC45B1E9F6774008625E6 /* QSRankDetailInteractor.swift in Sources */,
 				B22A8D551EADE0E900C7E978 /* QSBookCommentInteractor.swift in Sources */,
@@ -1599,24 +1873,34 @@
 				B2B02E4C1EA9A9CA00A6880A /* QSCategoryyViewController.swift in Sources */,
 				B2B4BBFC1E7EA4AB000CC201 /* UITableView+swizzling.swift in Sources */,
 				B258BAF91EA44BD0006E5802 /* QSTextPresenter.swift in Sources */,
+				794BEE281FB31EA600A50874 /* DZMReadChapterListModel.swift in Sources */,
 				B2580E1C1E9B236000455AFE /* QSSearchPresenter.swift in Sources */,
+				794BEE0A1FB31EA500A50874 /* UITableView+Extension.swift in Sources */,
 				B2B4BC231E7EA4AB000CC201 /* LeftViewController.swift in Sources */,
 				B2B4BC311E7EA4AB000CC201 /* BookComment.swift in Sources */,
 				B22A8D3E1EAD949C00C7E978 /* QSCommunityProtocols.swift in Sources */,
+				794BEE0F1FB31EA500A50874 /* DZMGlobalProperty.swift in Sources */,
 				B2FCAA8D1E9C85600064837C /* QSHistoryHeaderView.swift in Sources */,
 				B258BAFF1EA44C02006E5802 /* CategoryController.swift in Sources */,
 				B258BAFC1EA44BD0006E5802 /* QSTextRouter.swift in Sources */,
 				B203BB681E9E142C00F9C052 /* QSHistoryCell.swift in Sources */,
 				B2B4BBF41E7EA4AB000CC201 /* DateIntervalFormatter+formatter.swift in Sources */,
 				B278AB081F398926000A0D55 /* NSMutableAttributedString+M80.m in Sources */,
+				794BEE181FB31EA600A50874 /* DZMReadParser.swift in Sources */,
 				B22269D71EA0C70A008FD314 /* QSChapter.swift in Sources */,
 				B2580E1E1E9B236000455AFE /* QSSearchRouter.swift in Sources */,
 				B2B4BC4F1E7EA4AB000CC201 /* UserfulCell.swift in Sources */,
 				B2B4BC0E1E7EA4AB000CC201 /* QSRankModel.swift in Sources */,
+				794BEE0C1FB31EA500A50874 /* DZMHaloButton.swift in Sources */,
 				B2B4BBE01E7EA4AB000CC201 /* BaseViewController.swift in Sources */,
 				B2B02E611EA9F54700A6880A /* QSBookListViewCell.swift in Sources */,
+				794BEE211FB31EA600A50874 /* DZMRMLeftView.swift in Sources */,
+				794BEE241FB31EA600A50874 /* DZMRMBaseView.swift in Sources */,
+				794BEE051FB31EA500A50874 /* NSObject+Extension.swift in Sources */,
 				B2414D9C1EA602ED005A5758 /* UIViewController+Alert.swift in Sources */,
 				B20D46DF1E9FBABD00EC466A /* QSBookDetailPresenter.swift in Sources */,
+				794BEE261FB31EA600A50874 /* DZMReadRecordModel.swift in Sources */,
+				794BEE1C1FB31EA600A50874 /* DZMRMColorView.swift in Sources */,
 				B2B4BBE41E7EA4AB000CC201 /* CommunityView.swift in Sources */,
 				B2580E1D1E9B236000455AFE /* QSSearchProtocols.swift in Sources */,
 				B222A2C31EEE6EE9007CD57F /* QSLaunchRecView.swift in Sources */,
@@ -1627,6 +1911,7 @@
 				B278AA951F395FA4000A0D55 /* QSSegmentDropView.swift in Sources */,
 				B22A8D3D1EAD949C00C7E978 /* QSCommunityPresenter.swift in Sources */,
 				B2B4BC121E7EA4AB000CC201 /* SearchDetailViewController.swift in Sources */,
+				794BEE141FB31EA600A50874 /* UIView+YGPulseView.m in Sources */,
 				B278AA8C1F395F30000A0D55 /* LookBookViewController.swift in Sources */,
 				B2B4BC431E7EA4AB000CC201 /* BookDetailHeader.swift in Sources */,
 				B2B4BC261E7EA4AB000CC201 /* RootViewController.swift in Sources */,
@@ -1647,6 +1932,8 @@
 				B278AA981F396073000A0D55 /* ReadHistoryCell.swift in Sources */,
 				B2B4BC141E7EA4AB000CC201 /* SearchView.swift in Sources */,
 				B2CA942B1EB331DC00D60BF2 /* UIColor+Theme.swift in Sources */,
+				794BEE161FB31EA600A50874 /* DZMViewController.swift in Sources */,
+				794BEE2B1FB31EA600A50874 /* DZMReadViewCell.swift in Sources */,
 				B2B4BC291E7EA4AB000CC201 /* RootNavigationView.swift in Sources */,
 				B2B4BBED1E7EA4AB000CC201 /* RateView.swift in Sources */,
 				B22AC4571E9F5520008625E6 /* QSLoadingView.swift in Sources */,
@@ -1663,18 +1950,25 @@
 				B22AC4531E9F1CA8008625E6 /* QSRankRouter.swift in Sources */,
 				B2B4BC101E7EA4AB000CC201 /* TopDetailCell.swift in Sources */,
 				B2B4BC301E7EA4AB000CC201 /* Book.swift in Sources */,
+				794BEE111FB31EA500A50874 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				B22269D81EA0C70A008FD314 /* QSPage.swift in Sources */,
 				B2B4BC2D1E7EA4AB000CC201 /* CategoryViewController.swift in Sources */,
 				B29B4F9B1E8218ED008852E3 /* BookDetailViewController.swift in Sources */,
+				794BEE1B1FB31EA600A50874 /* DZMReadController.swift in Sources */,
 				B2B4BC0F1E7EA4AB000CC201 /* RankingViewCell.swift in Sources */,
 				B22AC45F1E9F6799008625E6 /* QSRankDetailRouter.swift in Sources */,
 				B20D46DE1E9FBABD00EC466A /* QSBookDetailInteractor.swift in Sources */,
+				794BEE131FB31EA600A50874 /* ASValueTrackingSlider.m in Sources */,
 				B278AB071F398926000A0D55 /* M80AttributedLabelURL.m in Sources */,
+				794BEE221FB31EA600A50874 /* DZMReadMenu.swift in Sources */,
 				B2B4BBE11E7EA4AB000CC201 /* SideViewController.swift in Sources */,
 				B2580E251E9B6AF500455AFE /* QSSearchHeaderView.swift in Sources */,
 				B2B4BC221E7EA4AB000CC201 /* DynamicViewController.swift in Sources */,
+				794BEE151FB31EA600A50874 /* DZMBatteryView.swift in Sources */,
 				B258BB071EA44C52006E5802 /* QSCategoryRouter.swift in Sources */,
 				B2FB91FD1EB1EEDF000C990A /* Reachability.swift in Sources */,
+				794BEE1A1FB31EA600A50874 /* DZMReadConfigure.swift in Sources */,
+				794BEE061FB31EA500A50874 /* UIView+Extension.swift in Sources */,
 				B258BB241EA4B201006E5802 /* UIView+ScreenShot.swift in Sources */,
 				B2B4BC1B1E7EA4AB000CC201 /* FilterThemeCell.swift in Sources */,
 				B2CA941F1EB31D5600D60BF2 /* ProgressView.swift in Sources */,
@@ -1687,8 +1981,10 @@
 				B288D1C81E9FC66F0024F1A5 /* QSBookDetailRateView.swift in Sources */,
 				B22A8D401EAD949D00C7E978 /* QSCommunityViewController.swift in Sources */,
 				B2B02E471EA8920F00A6880A /* QSCategoryDetailRouter.swift in Sources */,
+				794BEE251FB31EA600A50874 /* DZMRMLightView.swift in Sources */,
 				B29B4F9F1E822992008852E3 /* QSHotModel.swift in Sources */,
 				B2B4BC2A1E7EA4AB000CC201 /* SegMenu.swift in Sources */,
+				794BEE231FB31EA600A50874 /* DZMRMTopView.swift in Sources */,
 				B2B02E2F1EA8505200A6880A /* QSTopicDetailViewController.swift in Sources */,
 				B203BB591E9E0F4400F9C052 /* QSSearchViewController+SearchBar.swift in Sources */,
 				B22A8D3F1EAD949C00C7E978 /* QSCommunityRouter.swift in Sources */,
@@ -1703,6 +1999,7 @@
 				B258BAFB1EA44BD0006E5802 /* QSTextReaderController.swift in Sources */,
 				B2B4BBF31E7EA4AB000CC201 /* Date+Extension.swift in Sources */,
 				B29B4FA21E8257BC008852E3 /* DynamicCell.swift in Sources */,
+				794BEE081FB31EA500A50874 /* UIScrollView+Extension.swift in Sources */,
 				B22AC44B1E9F0AE7008625E6 /* QSSearchAutoCompleteTable.swift in Sources */,
 				B2B4BC341E7EA4AB000CC201 /* BookShelf.swift in Sources */,
 				B278AA931F395FA4000A0D55 /* QSHelpViewCell.swift in Sources */,
@@ -1711,16 +2008,22 @@
 				B2B4BBE21E7EA4AB000CC201 /* SwiftyJSON.swift in Sources */,
 				B22A8D591EADE0E900C7E978 /* QSBookCommentViewController.swift in Sources */,
 				B2B4BC371E7EA4AB000CC201 /* ChapterInfo.swift in Sources */,
+				794BEE2A1FB31EA600A50874 /* DZMReadChapterModel.swift in Sources */,
 				B2B02E481EA8920F00A6880A /* QSCategoryDetailViewController.swift in Sources */,
 				B2F778BC1EAF31DB004B4362 /* UITableView+FINAutomaticHeightCell.swift in Sources */,
+				794BEE0E1FB31EA500A50874 /* DZMGlobalMethod.swift in Sources */,
 				B22A8D561EADE0E900C7E978 /* QSBookCommentPresenter.swift in Sources */,
 				B22A8D4A1EADE08100C7E978 /* BookCommentViewController.swift in Sources */,
 				B2B4BC0A1E7EA4AB000CC201 /* CategoryCell.swift in Sources */,
+				794BEE2C1FB31EA600A50874 /* DZMReadViewUDCell.swift in Sources */,
+				794BEE0B1FB31EA500A50874 /* DZMSegmentedControl.swift in Sources */,
 				B22A8D3C1EAD949C00C7E978 /* QSCommunityInteractor.swift in Sources */,
 				B2B4BD091E7EA4AC000CC201 /* ViewController.swift in Sources */,
 				B258BB0D1EA4A1AC006E5802 /* QSReaderBackgroundViewController.swift in Sources */,
+				794BEE1D1FB31EA600A50874 /* DZMRMSettingView.swift in Sources */,
 				B2B02E561EA9A9F000A6880A /* QSCatalogRouter.swift in Sources */,
 				B2583CBA1EA782C2004178F3 /* QSThemeTopicInteractor.swift in Sources */,
+				794BEE071FB31EA500A50874 /* String+Extension.swift in Sources */,
 				B2B4BBE61E7EA4AB000CC201 /* DarkView.swift in Sources */,
 				B2B4BBEB1E7EA4AB000CC201 /* LightStarView.swift in Sources */,
 				B28FFC921EB03EA300C27FF9 /* QSHomeDeleteBtn.swift in Sources */,
@@ -1735,6 +2038,7 @@
 				B22269D61EA0C70A008FD314 /* QSBook.swift in Sources */,
 				B2580E1B1E9B236000455AFE /* QSSearchInteractor.swift in Sources */,
 				B2B4BC181E7EA4AB000CC201 /* ThemeTopicModel.swift in Sources */,
+				794BEE041FB31EA500A50874 /* UIDevice+Extension.swift in Sources */,
 				B2B4BC331E7EA4AB000CC201 /* BookDetail.swift in Sources */,
 				B20D46E21E9FBABD00EC466A /* QSBookDetailViewController.swift in Sources */,
 				B2B4BC201E7EA4AB000CC201 /* TopicDetailHeaderCell.swift in Sources */,
@@ -1746,11 +2050,14 @@
 				B2FCAA8B1E9C82CE0064837C /* QSSearchItem.swift in Sources */,
 				B2B4BC1A1E7EA4AB000CC201 /* TopicDetailModel.swift in Sources */,
 				B2B4BC251E7EA4AB000CC201 /* RootViewController+FetchData.swift in Sources */,
+				794BEE1E1FB31EA600A50874 /* DZMRMFuncView.swift in Sources */,
 				B2B4BBF21E7EA4AB000CC201 /* Config.swift in Sources */,
+				794BEE1F1FB31EA600A50874 /* DZMRMBottomView.swift in Sources */,
 				B2583CA11EA74A37004178F3 /* QSBatteryView.swift in Sources */,
 				B20D74081EED7D250034516F /* QSIntroduceCell.swift in Sources */,
 				B2B4BBEF1E7EA4AB000CC201 /* XYCActionSheet.swift in Sources */,
 				B278AA661F3954FF000A0D55 /* QSAPI.swift in Sources */,
+				794BEE291FB31EA600A50874 /* DZMReadMarkModel.swift in Sources */,
 				B2583CB31EA78280004178F3 /* ThemeTopicViewController.swift in Sources */,
 				B2B4BBFA1E7EA4AB000CC201 /* UINavigationItem+BackItem.m in Sources */,
 				B2B02E451EA8920F00A6880A /* QSCategoryDetailPresenter.swift in Sources */,
@@ -1760,8 +2067,11 @@
 				B2B4BD7A1E7EE2B1000CC201 /* QSNetworkManager.swift in Sources */,
 				B2B02E3D1EA891E700A6880A /* CategoryDetailViewController.swift in Sources */,
 				B203BB651E9E119400F9C052 /* QSSearchViewController+Transition.swift in Sources */,
+				794BEE271FB31EA600A50874 /* DZMReadModel.swift in Sources */,
 				B258BB051EA44C52006E5802 /* QSCategoryPresenter.swift in Sources */,
+				794BEE2D1FB31EA600A50874 /* DZMReadView.swift in Sources */,
 				B22AC44F1E9F1C7D008625E6 /* QSRankInteractor.swift in Sources */,
+				794BEE191FB31EA600A50874 /* DZMReadViewController.swift in Sources */,
 				B20D46E01E9FBABD00EC466A /* QSBookDetailProtocols.swift in Sources */,
 				B2B4BBE51E7EA4AB000CC201 /* DarkStarView.swift in Sources */,
 				B2583CB21EA78280004178F3 /* FilterThemeViewController.swift in Sources */,
@@ -1771,6 +2081,8 @@
 				B2B4BC3E1E7EA4AB000CC201 /* BookCommentCell.swift in Sources */,
 				B22AC4551E9F1E8F008625E6 /* QSRankViewController.swift in Sources */,
 				B2580E1F1E9B236000455AFE /* QSSearchViewController.swift in Sources */,
+				794BEE0D1FB31EA500A50874 /* DZMUserDefaults.swift in Sources */,
+				794BEE101FB31EA500A50874 /* DZMCoverController.m in Sources */,
 				B288D1D41E9FC86C0024F1A5 /* QSBookDetailTagsView.swift in Sources */,
 				B22A8D441EAD976000C7E978 /* QSDiscussCell.swift in Sources */,
 				B278AB051F398926000A0D55 /* M80AttributedLabel.m in Sources */,

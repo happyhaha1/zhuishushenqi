@@ -166,7 +166,7 @@
 				TargetAttributes = {
 					B2C64AA41E7BC6AF00AA29F6 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 8K684WSCKB;
+						DevelopmentTeam = 5K9M5424N7;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
@@ -350,7 +350,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 8K684WSCKB;
+				DEVELOPMENT_TEAM = 5K9M5424N7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -372,7 +372,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 8K684WSCKB;
+				DEVELOPMENT_TEAM = 5K9M5424N7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -432,6 +432,7 @@
 				B2C64ABB1E7BC6AF00AA29F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2C64ABC1E7BC6AF00AA29F6 /* Build configuration list for PBXNativeTarget "QSPullToRefreshTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +441,7 @@
 				B2C64ABE1E7BC6AF00AA29F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

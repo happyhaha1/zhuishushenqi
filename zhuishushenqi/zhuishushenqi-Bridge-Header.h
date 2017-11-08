@@ -16,5 +16,6 @@
 #import "M80AttributedLabel.h"
 #import "NSString+Encode.h"
 #import "YTKKeyValueStore.h"
+#import "DZMeBookRead-Bridging-Pch.h"
 
 #endif /* zhuishushenqi_Bridge_Header_h */
