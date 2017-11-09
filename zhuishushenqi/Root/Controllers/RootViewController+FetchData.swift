@@ -33,14 +33,6 @@ extension RootViewController{
         //未登录中状态下，图书的信息保存在userdefault中
         if !User.user.isLogin {
             self.bookShelfArr = BookShelfInfo.books.bookShelf
-            let url:NSString = "http://www.luoqiu.com/read/175859"
-            QSLog(url.lastPathComponent)
-            QSLog(url.deletingLastPathComponent)
-            QSLog(url.pathComponents)
-            QSLog(url.pathExtension)
-            if url.pathExtension == "" {
-                QSLog(url.pathExtension)
-            }
         }
     }
     

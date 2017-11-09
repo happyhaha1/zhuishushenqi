@@ -74,17 +74,6 @@ class RootViewController: UIViewController {
         self.requestBookShelf()
         self.updateInfo()
         
-//        let queue = DispatchQueue.global()
-//        let semaphore = DispatchSemaphore(value: 1)
-//        var arr:[Int] = []
-//        for index in 0..<100 {
-//            queue.async {
-//                _ = semaphore.wait(timeout:DispatchTime.distantFuture)
-//                QSLog(index)
-//                arr.append(index)
-//                semaphore.signal()
-//            }
-//        }
     }
     
     func bookShelfUpdate(){
