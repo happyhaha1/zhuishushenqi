@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreText
+import QSNetwork
+import Alamofire
 
 class DZMReadParser: NSObject {
     
@@ -35,6 +37,90 @@ class DZMReadParser: NSObject {
             
         }
     }
+    
+    /**
+     异步线程 解析本地URL
+     
+     - parameter url: 本地小说文本URL
+     
+     - parameter complete: 成功返回true  失败返回false
+     
+     - returns: ReadModel
+     */
+    class func ParserBookDetail(bookDetail:BookDetail,complete:((_ readModel:DZMReadModel) ->Void)?) {
+        
+        DispatchQueue.global().async {
+            
+            let readModel = DZMReadParser.ParserBookDetail(bookDeatil: bookDetail)
+            
+            DispatchQueue.main.async(execute: {()->() in
+                
+                if complete != nil {complete!(readModel)}
+            })
+            
+        }
+    }
+    
+    class func ParserBookDetail(bookDeatil: BookDetail) ->DZMReadModel{
+        let bookID = bookDeatil._id
+        if !DZMReadModel.IsExistReadModel(bookID: bookID) {
+            // 阅读模型
+            let readModel = DZMReadModel.readModel(bookID: bookID)
+            
+            // 获得章节列表
+            readModel.readChapterListModels = ParserChapters(bookDeatil: bookDeatil)
+            
+            // 设置阅读记录 第一个章节 为 首个章节ID
+            readModel.modifyReadRecordModel(chapterID: "1")
+            
+            // 保存
+            readModel.save()
+            
+            // 返回
+            return readModel
+        }else {
+            return DZMReadModel.readModel(bookID: bookID)
+        }
+    }
+    
+    class func ParserChapters(bookDeatil: BookDetail) -> [DZMReadChapterListModel] {
+        if bookDeatil.chapters == nil {
+            bookDeatil.chapters = DZMReadParser.requestAllChapters(bookDetail: bookDeatil)
+        }
+        var readChapterListModels:[DZMReadChapterListModel] = []
+        var i = 0;
+        for chapter in bookDeatil.chapters! {
+            i = i + 1
+            // 创建章节内容模型
+            let readChapterModel = DZMReadChapterModel()
+            
+            // 书ID
+            readChapterModel.bookID = bookDeatil._id
+            
+            // 章节ID
+            readChapterModel.id = "\(i)"
+            
+            // 章节名
+            readChapterModel.name = chapter["title"] as! String
+            
+            // 优先级
+            readChapterModel.priority = NSNumber(value: 0)
+            
+            // 内容
+            readChapterModel.content = ContentTypesetting(content: "asdfasdfasdfasdfas ssss")
+            
+            // 分页
+            readChapterModel.updateFont()
+            
+            // 添加章节列表模型
+            readChapterListModels.append(GetReadChapterListModel(readChapterModel: readChapterModel))
+            
+            // 保存
+            readChapterModel.save()
+        }
+        return readChapterListModels
+    }
+    
     
     /**
      主线程 解析本地URL
@@ -358,5 +444,21 @@ class DZMReadParser: NSObject {
         let frameRef = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, 0), path, nil)
         
         return frameRef
+    }
+    
+    //网络请求所有的章节信息
+    class func requestAllChapters(bookDetail: BookDetail) -> [NSDictionary]? {
+        //    let selectedIndex = bookDetail.sourceIndex
+        //两种情况,1.resources为空，说明第一次打开，直接通过book.id来请求
+        //       2.resource不为空，按照resources来请求
+        let api = QSAPI.allChapters(key: bookDetail._id)
+        let url:String = api.path
+        let response = QSNetwork.request(url, method: HTTPMethodType.get, parameters: api.parameters, headers: nil, completionHandler: nil)
+        if let mixToc = response.json?["mixToc"] as? NSDictionary {
+            if let chapters = mixToc["chapters"] as? [NSDictionary] {
+                return chapters
+            }
+        }
+        return nil
     }
 }

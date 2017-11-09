@@ -136,10 +136,10 @@ extension QSAPI:TargetType{
             pathComponent = "/post/review/by-book?book=\(key)&sort=updated&start=\(start)&limit=20"
             break
         case .allResource(_):
-            pathComponent = "/toc"
+            pathComponent = "/mix-atoc"
             break
         case let .allChapters(key):
-            pathComponent = "/toc/\(key)"
+            pathComponent = "/mix-atoc/\(key)"
             break
         case let .chapter(key,_):
             pathComponent = "/\(key)?k=22870c026d978c75&t=1489933049"

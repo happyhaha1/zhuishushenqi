@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.5.1)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
@@ -13,6 +14,7 @@ PODS:
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.5)
   - FMDB (= 2.6.2)
   - Kingfisher (= 3.5.1)
   - MBProgressHUD (~> 1.0.0)
@@ -23,6 +25,7 @@ DEPENDENCIES:
   - YYKit (= 1.0.9)
 
 SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   Kingfisher: 12eeffeef42ea45b68c5e5acfe8ba9005b713ab4
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
@@ -32,6 +35,6 @@ SPEC CHECKSUMS:
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 44a188cfacbb76bf27c127012977a553e7cf4412
+PODFILE CHECKSUM: 37d7a95176bcf5f106639de87dca0260d5bc6ac2
 
 COCOAPODS: 1.3.1

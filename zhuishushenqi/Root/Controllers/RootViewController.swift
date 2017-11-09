@@ -215,53 +215,20 @@ extension RootViewController:UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+     
+//        MBProgressHUD.showMessage("本地文件第一次解析慢,以后就会秒进了")
         
-//        self.present(QSTextRouter.createModule(bookDetail:self.bookShelfArr![indexPath.row],callback: { (book:BookDetail) in
-//            self.updateShelfArr(book: book)
-//        }), animated: true, completion: nil)
-//        QSLog("\(.chapters)")
         let book = self.bookShelfArr![indexPath.row]
-        var readChapterListModels:[DZMReadChapterListModel] = []
-
-        var i = 0;
-        for chapter in book.chapters! {
-            i = i + 1
-            // 创建章节内容模型
-            let readChapterModel = DZMReadChapterModel()
+        DZMReadParser.ParserBookDetail(bookDetail: book)  {[weak self] (readModel) in
             
-            // 书ID
-            readChapterModel.bookID = book._id
+//            MBProgressHUD.hide()
             
-            // 章节ID
-            readChapterModel.id = "\(i)"
-            QSLog("\(chapter)")
-            // 章节名
-            readChapterModel.name = chapter["title"] as! String
-//            QSLog("\(chapter["link"])")
-            // 优先级
-            readChapterModel.priority = NSNumber(value: 0)
+            let readController = DZMReadController()
             
-            // 内容
-            readChapterModel.content = ContentTypesetting(content: "asdfasdfasdfasdfas ssss")
+            readController.readModel = readModel
             
-            // 分页
-            readChapterModel.updateFont()
-            
-            // 添加章节列表模型
-            readChapterListModels.append(GetReadChapterListModel(readChapterModel: readChapterModel))
-            
-            // 保存
-            readChapterModel.save()
+            self?.navigationController?.pushViewController(readController, animated: true)
         }
-        
-        let readModel: DZMReadModel = DZMReadModel.readModel(bookID: book._id)
-
-        readModel.readChapterListModels = readChapterListModels
-        readModel.modifyReadRecordModel(chapterID: "1")
-
-        let readController = DZMReadController()
-        readController.readModel = readModel
-        self.navigationController?.pushViewController(readController, animated: true)
 
     }
     
