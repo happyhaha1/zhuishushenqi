@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class DZMReadChapterModel: NSObject,NSCoding {
     
@@ -32,17 +33,18 @@ class DZMReadChapterModel: NSObject,NSCoding {
     var rangeArray:[NSRange] = []
     
     
+    var link: String!
     // MARK: -- 更新字体
     
     /// 记录该章使用的字体属性
     private var readAttribute:[String:NSObject] = [:]
     
     /// 更新字体
-    func updateFont(isSave:Bool = false) {
+    func updateFont(isSave:Bool = false,isUPdate:Bool = false) {
         
         let readAttribute = DZMReadConfigure.shared().readAttribute()
         
-        if self.readAttribute != readAttribute {
+        if self.readAttribute != readAttribute || isUPdate {
             
             self.readAttribute = readAttribute
             
@@ -69,7 +71,13 @@ class DZMReadChapterModel: NSObject,NSCoding {
         if DZMReadChapterModel.IsExistReadChapterModel(bookID: bookID, chapterID: chapterID) { // 存在
             
             readChapterModel = ReadKeyedUnarchiver(folderName: bookID, fileName: chapterID) as! DZMReadChapterModel
-            
+            if readChapterModel.content == "空的" {
+
+                let content = DZMReadParser.requestChapter(link: readChapterModel.link as NSString)
+                readChapterModel.content = ContentTypesetting(content: content!)
+
+                readChapterModel.updateFont(isSave: true,isUPdate: true)
+            }
             if isUpdateFont {readChapterModel.updateFont(isSave: true)}
             
         }else{ // 不存在
@@ -143,6 +151,8 @@ class DZMReadChapterModel: NSObject,NSCoding {
         rangeArray = aDecoder.decodeObject(forKey: "rangeArray") as! [NSRange]
         
         readAttribute = aDecoder.decodeObject(forKey: "readAttribute") as! [String:NSObject]
+        
+        link = aDecoder.decodeObject(forKey: "link") as! String
     }
     
     func encode(with aCoder: NSCoder) {
@@ -162,5 +172,7 @@ class DZMReadChapterModel: NSObject,NSCoding {
         aCoder.encode(rangeArray, forKey: "rangeArray")
         
         aCoder.encode(readAttribute, forKey: "readAttribute")
+        
+        aCoder.encode(link, forKey: "link")
     }
 }

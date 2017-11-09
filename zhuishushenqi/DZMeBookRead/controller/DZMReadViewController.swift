@@ -295,60 +295,6 @@ class DZMReadViewController: UIViewController,UITableViewDelegate,UITableViewDat
                     }
                 }
             }
-            
-            /// 主线程更新 滚动会有点卡顿
-//            if tableView.indexPathsForVisibleRows != nil && !tableView.indexPathsForVisibleRows!.isEmpty { // 有Cell
-//
-//                // 章节ID
-//                var chapterID:String!
-//
-//                // 页码
-//                var toPage:NSInteger!
-//
-//                // 范围
-//                var rect = GetReadTableViewFrame()
-//
-//                // 显示章节Cell IndexPath
-//                var indexPath = tableView.indexPathsForRows(in: CGRect(x: tableView.contentOffset.x, y: tableView.contentOffset.y, width: rect.width, height: rect.height))!.first!
-//
-//                // 记录
-//                chapterID = "\(indexPath.row + 1)"
-//
-//                // 显示章节Cell Frame
-//                rect = tableView.rectForRow(at: indexPath)
-//
-//                // 显示章节Cell
-//                let cell = tableView.cellForRow(at: indexPath) as! DZMReadViewUDCell
-//
-//                // 显示章节内容 Frame
-//                rect = CGRect(x: tableView.contentOffset.x, y: tableView.contentOffset.y - rect.origin.y, width: rect.width, height: rect.height)
-//
-//                // 显示章节内容 IndexPath
-//                indexPath =  cell.tableView.indexPathsForRows(in: rect)!.first!
-//
-//                // 记录
-//                toPage = indexPath.row
-//
-//                if readRecordModel.readChapterModel!.id == chapterID {
-//
-//                    // 修改页码
-//                    readRecordModel.page = NSNumber(value: toPage)
-//
-//                }else{
-//
-//                    // 修改章节
-//                    readRecordModel.modify(chapterID: chapterID, toPage: toPage)
-//                }
-//
-//                // 修改顶部显示
-//                topStatusView.text = readRecordModel.readChapterModel!.name
-//
-//                // 修改底部显示
-//                bottomStatusView.titleLabel.text = "\(readRecordModel.page.intValue + 1)/\(readRecordModel.readChapterModel!.pageCount.intValue)"
-//                
-//                // 保存
-//                readController.readOperation.readRecordUpdate(readRecordModel: readRecordModel)
-//            }
         }
     }
     

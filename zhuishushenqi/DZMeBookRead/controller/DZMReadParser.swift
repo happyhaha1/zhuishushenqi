@@ -9,6 +9,7 @@
 import UIKit
 import CoreText
 import QSNetwork
+import SVProgressHUD
 
 class DZMReadParser: NSObject {
     
@@ -66,6 +67,8 @@ class DZMReadParser: NSObject {
             // 阅读模型
             let readModel = DZMReadModel.readModel(bookID: bookID)
             
+//            readModel.isLocalBook = NSNumber(value:0)
+            
             // 获得章节列表
             readModel.readChapterListModels = ParserChapters(bookDeatil: bookDeatil)
             
@@ -105,8 +108,10 @@ class DZMReadParser: NSObject {
             // 优先级
             readChapterModel.priority = NSNumber(value: 0)
             
+            readChapterModel.link = chapter["link"] as! String
+            
             // 内容
-            readChapterModel.content = ContentTypesetting(content: "asdfasdfasdfasdfas ssss")
+            readChapterModel.content = "空的"
             
             // 分页
             readChapterModel.updateFont()
@@ -462,6 +467,19 @@ class DZMReadParser: NSObject {
         if let mixToc = response.json?["mixToc"] as? NSDictionary {
             if let chapters = mixToc["chapters"] as? [NSDictionary] {
                 return chapters
+            }
+        }
+        return nil
+    }
+    
+    //网络请求某一章节的信息
+    class func requestChapter(link: NSString) -> String?{
+        let selflink = link.urlEncode() as NSString
+        let api = QSAPI.chapter(key: selflink as String, type: .chapter)
+        let response = QSNetwork.request(api.path,completionHandler: nil)
+        if let chapter = response.json?["chapter"] as? NSDictionary {
+            if let cpContent = chapter["body"] as? String {
+                return cpContent
             }
         }
         return nil
