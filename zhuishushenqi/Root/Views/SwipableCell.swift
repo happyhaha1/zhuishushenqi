@@ -120,17 +120,17 @@ class SwipableCell: UITableViewCell {
         centerView.addSubview(self.title!)
         centerView.addSubview(self.detailTitle!)
         
-//        touchOverlay = UIView()
-//        touchOverlay.frame = self.centerView.bounds;
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(tapGestureAction(tap:)))
+        touchOverlay = UIView()
+        touchOverlay.frame = self.centerView.bounds;
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapGestureAction(tap:)))
 //        touchOverlay.addGestureRecognizer(tap)
         
         self.contentView.addSubview(container)
         container.addSubview(rightView)
         container.addSubview(centerView)
 
-//        panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureAction(pan:)))
-//        panGesture.delegate = self
+        panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureAction(pan:)))
+        panGesture.delegate = self
 //        container.addGestureRecognizer(panGesture)
     }
     
@@ -158,75 +158,75 @@ class SwipableCell: UITableViewCell {
         stateImage.image = UIImage(named: imageName)
     }
     
-//    func translation(direction:TranslationDirection,offset:CGFloat,animation:Bool){
-//        var animationDuration = 0.0001
-//        if animation {
-//            animationDuration = 0.35
-//        }
-//        if direction == .right && offset <= 0 {
-//            curOffset = 0
-//            //关闭右边显示
-//            UIView.animate(withDuration: animationDuration, animations: {
-//                self.centerView.frame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
-//                self.rightView.frame = CGRect(x: self.bounds.width, y: 0, width: CGFloat(self.titles.count) * self.bounds.height, height: self.bounds.height)
-//            }, completion: { (finished) in
-//                self.touchOverlay.removeFromSuperview()
-//            })
-//        }else if direction == .left && offset < 0 {
-//            UIView.animate(withDuration: animationDuration, animations: {
-//                self.centerView.frame = CGRect(x: offset, y: 0, width: self.bounds.width, height: self.bounds.height)
-//                self.rightView.frame = CGRect(x: self.bounds.width + offset, y: 0, width: CGFloat(self.titles.count) * self.bounds.height, height: self.bounds.height)
-//            }, completion: { (finished) in
-//                self.centerView.addSubview(self.touchOverlay)
-//            })
-//        }
-//    }
-//
-//    func tapGestureAction(tap:UITapGestureRecognizer){
-//        self.curOffset = 0
-//        translation(direction: .right, offset: self.curOffset, animation: true)
-//    }
-//
-//    func panGestureAction(pan:UIPanGestureRecognizer){
-//        let translation = pan.translation(in: container)
-//        let velocity = pan.velocity(in: container)
-//        var offset:CGFloat = 0
-//        if pan.state == .began {
-//            if curOffset == 0 {
-//                curOffset = translation.x
-//            }
-//            rightOffSet = rightView.bounds.width
-//            offset = curOffset
-//        }else if pan.state == .changed {
-//            //当前向左偏移，显示右边视图
-//            if offset <= 0 {
-//                offset = curOffset + translation.x
-//            }
-//            self.translation(direction: .left, offset: offset, animation: false)
-//        }else if pan.state == .ended {
-//            curOffset = offset
-//            if curOffset <= 0 {
-//                if velocity.x > 0 {
-//                    curOffset = 0
-//                    self.translation(direction: .right, offset: curOffset, animation: true)
-//                }else{
-//                    curOffset = -rightOffSet
-//                    self.translation(direction: .left, offset: curOffset, animation: true)
-//                }
-//            }
-//        }
-//    }
-//
-//    override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-//        if gestureRecognizer != panGesture {
-//            return true
-//        }
-//        let translation = panGesture.translation(in: container)
-//        if fabs(translation.y) > fabs(translation.x)  {
-//            return false
-//        }
-//        return true
-//    }
+    func translation(direction:TranslationDirection,offset:CGFloat,animation:Bool){
+        var animationDuration = 0.0001
+        if animation {
+            animationDuration = 0.35
+        }
+        if direction == .right && offset <= 0 {
+            curOffset = 0
+            //关闭右边显示
+            UIView.animate(withDuration: animationDuration, animations: {
+                self.centerView.frame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
+                self.rightView.frame = CGRect(x: self.bounds.width, y: 0, width: CGFloat(self.titles.count) * self.bounds.height, height: self.bounds.height)
+            }, completion: { (finished) in
+                self.touchOverlay.removeFromSuperview()
+            })
+        }else if direction == .left && offset < 0 {
+            UIView.animate(withDuration: animationDuration, animations: {
+                self.centerView.frame = CGRect(x: offset, y: 0, width: self.bounds.width, height: self.bounds.height)
+                self.rightView.frame = CGRect(x: self.bounds.width + offset, y: 0, width: CGFloat(self.titles.count) * self.bounds.height, height: self.bounds.height)
+            }, completion: { (finished) in
+                self.centerView.addSubview(self.touchOverlay)
+            })
+        }
+    }
+
+    func tapGestureAction(tap:UITapGestureRecognizer){
+        self.curOffset = 0
+        translation(direction: .right, offset: self.curOffset, animation: true)
+    }
+
+    func panGestureAction(pan:UIPanGestureRecognizer){
+        let translation = pan.translation(in: container)
+        let velocity = pan.velocity(in: container)
+        var offset:CGFloat = 0
+        if pan.state == .began {
+            if curOffset == 0 {
+                curOffset = translation.x
+            }
+            rightOffSet = rightView.bounds.width
+            offset = curOffset
+        }else if pan.state == .changed {
+            //当前向左偏移，显示右边视图
+            if offset <= 0 {
+                offset = curOffset + translation.x
+            }
+            self.translation(direction: .left, offset: offset, animation: false)
+        }else if pan.state == .ended {
+            curOffset = offset
+            if curOffset <= 0 {
+                if velocity.x > 0 {
+                    curOffset = 0
+                    self.translation(direction: .right, offset: curOffset, animation: true)
+                }else{
+                    curOffset = -rightOffSet
+                    self.translation(direction: .left, offset: curOffset, animation: true)
+                }
+            }
+        }
+    }
+
+    override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if gestureRecognizer != panGesture {
+            return true
+        }
+        let translation = panGesture.translation(in: container)
+        if fabs(translation.y) > fabs(translation.x)  {
+            return false
+        }
+        return true
+    }
     
     func configureCell(model:BookDetail){
         self.model = model

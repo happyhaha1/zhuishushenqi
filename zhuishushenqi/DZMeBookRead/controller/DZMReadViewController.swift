@@ -19,6 +19,9 @@ class DZMReadViewController: UIViewController,UITableViewDelegate,UITableViewDat
     /// 顶部状态栏
     private(set) var topStatusView:UILabel!
     
+    /// 顶部状态栏
+    private(set) var topStatusView2:UILabel!
+    
     var isHidden: Bool = true
     
     /// 底部状态栏
@@ -54,12 +57,23 @@ class DZMReadViewController: UIViewController,UITableViewDelegate,UITableViewDat
         
         // TopStatusView
         topStatusView = UILabel()
-        topStatusView.text = readRecordModel.readChapterModel?.name
+        let name = readRecordModel.readChapterModel?.name as NSString?
+        let strs = name?.components(separatedBy: " ")
+        topStatusView.text = strs?[0]
         topStatusView.lineBreakMode = .byTruncatingMiddle
         topStatusView.textColor = DZMColor_4
         topStatusView.font = DZMFont_12
-        topStatusView.frame = CGRect(x: DZMSpace_1, y: 0, width: view.width - 2 * DZMSpace_1, height: DZMSpace_2)
+        topStatusView.frame = CGRect(x: DZMSpace_5, y: 0, width: view.width - 2 * DZMSpace_1, height: DZMSpace_2)
         view.addSubview(topStatusView)
+        
+        // TopStatusView
+        topStatusView2 = UILabel()
+        topStatusView2.text = strs?[1]
+        topStatusView2.lineBreakMode = .byTruncatingMiddle
+        topStatusView2.textColor = DZMColor_4
+        topStatusView2.font = DZMFont_12
+        topStatusView2.frame = CGRect(x: view.width - 60, y: 0, width: view.width - 2 * DZMSpace_1, height: DZMSpace_2)
+        view.addSubview(topStatusView2)
         
         // BottomStatusView
         bottomStatusView = DZMRMStatusView(frame:CGRect(x: DZMSpace_1, y: view.frame.height - DZMSpace_2, width: view.width - 2 * DZMSpace_1, height: DZMSpace_2))

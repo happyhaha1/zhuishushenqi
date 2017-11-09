@@ -22,6 +22,8 @@ class DZMRMLeftView: DZMRMBaseView,DZMSegmentedControlDelegate,UITableViewDelega
     /// 类型 0: 章节 1: 书签
     private var type:NSInteger = 0
     
+    var row: NSInteger!
+    
     override func addSubviews() {
         
         super.addSubviews()
@@ -37,8 +39,10 @@ class DZMRMLeftView: DZMRMBaseView,DZMSegmentedControlDelegate,UITableViewDelega
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.frame = GetReadTableViewFrame()
+        tableView.frame = CGRect(x: DZMSpace_1, y: y, width: ScreenWidth - 300, height: ScreenHeight - 2 * y)
         contentView.addSubview(tableView)
+        
+       
         
         // topView
         topView = DZMSegmentedControl()
@@ -135,6 +139,7 @@ class DZMRMLeftView: DZMRMBaseView,DZMSegmentedControlDelegate,UITableViewDelega
             
             cell?.textLabel?.font = DZMFont_18
             
+            
         }else{ // 书签
             
             let readMarkModel = readMenu.vc.readModel.readMarkModels[indexPath.row]
@@ -144,9 +149,14 @@ class DZMRMLeftView: DZMRMBaseView,DZMSegmentedControlDelegate,UITableViewDelega
             cell?.textLabel?.numberOfLines = 0
             
             cell?.textLabel?.font = DZMFont_12
+            
         }
-        
-        cell?.textLabel?.textColor = DZMColor_6
+        let current = readMenu.vc.readModel.readRecordModel.readChapterModel!.id.integerValue()
+        if current == indexPath.row {
+            cell?.textLabel?.textColor = DZMColor_2
+        }else {
+            cell?.textLabel?.textColor = DZMColor_6
+        }
         
         return cell!
     }

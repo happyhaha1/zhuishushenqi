@@ -444,6 +444,11 @@ class DZMReadMenu: NSObject,UIGestureRecognizerDelegate {
                 self?.leftView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
                 
                 self?.leftView.contentView.frame = CGRect(x: 0, y: 0, width: rect.width, height: rect.height)
+               
+                //默认选中的cell
+                let defaultCell = IndexPath(row: (self?.vc.readModel.readRecordModel.readChapterModel!.id.integerValue())!, section: 0)
+                //默认选中
+                self?.leftView.tableView.selectRow(at: defaultCell, animated: true, scrollPosition: UITableViewScrollPosition.middle)//移动到顶端
                 
             }else{
                 

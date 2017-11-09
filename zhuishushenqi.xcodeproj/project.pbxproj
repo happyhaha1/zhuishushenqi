@@ -54,6 +54,8 @@
 		7963720B1FB2C53D00D576E4 /* QSPullToRefresh.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B278AAE41F3967A4000A0D55 /* QSPullToRefresh.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		797817DB1FB4200E007FF493 /* Alamofire+Synchronous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797817DA1FB4200E007FF493 /* Alamofire+Synchronous.swift */; };
 		797817E11FB44392007FF493 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797817E21FB44392007FF493 /* SVProgressHUD.framework */; };
+		79D657AC1FB48AE6002DC2BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D657AB1FB48AE6002DC2BD /* Images.xcassets */; };
+		79D657B11FB48BFD002DC2BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D657B01FB48BFC002DC2BD /* LaunchScreen.storyboard */; };
 		B200D1FF1EEDB1FE003A42E3 /* QSIntroduceReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B200D1FD1EEDB1FE003A42E3 /* QSIntroduceReadCell.swift */; };
 		B200D2001EEDB1FE003A42E3 /* QSIntroduceReadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B200D1FE1EEDB1FE003A42E3 /* QSIntroduceReadCell.xib */; };
 		B200D2221EEE44AB003A42E3 /* QSLaunchRecView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B200D2211EEE44AB003A42E3 /* QSLaunchRecView.xib */; };
@@ -214,7 +216,6 @@
 		B2B4BBED1E7EA4AB000CC201 /* RateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4BA0B1E7EA4A8000CC201 /* RateView.swift */; };
 		B2B4BBEE1E7EA4AB000CC201 /* V2FPSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4BA0C1E7EA4A8000CC201 /* V2FPSLabel.swift */; };
 		B2B4BBEF1E7EA4AB000CC201 /* XYCActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4BA0D1E7EA4A8000CC201 /* XYCActionSheet.swift */; };
-		B2B4BBF01E7EA4AB000CC201 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B4BA0E1E7EA4A8000CC201 /* LaunchScreen.storyboard */; };
 		B2B4BBF11E7EA4AB000CC201 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B4BA101E7EA4A8000CC201 /* Main.storyboard */; };
 		B2B4BBF21E7EA4AB000CC201 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4BA121E7EA4A8000CC201 /* Config.swift */; };
 		B2B4BBF31E7EA4AB000CC201 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4BA141E7EA4A8000CC201 /* Date+Extension.swift */; };
@@ -396,6 +397,8 @@
 		794BEE031FB31EA500A50874 /* DZMReadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadView.swift; sourceTree = "<group>"; };
 		797817DA1FB4200E007FF493 /* Alamofire+Synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Synchronous.swift"; sourceTree = "<group>"; };
 		797817E21FB44392007FF493 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D657AB1FB48AE6002DC2BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		79D657B01FB48BFC002DC2BD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B08901F972525F29A370AA86 /* Pods-zhuishushenqi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhuishushenqi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zhuishushenqi/Pods-zhuishushenqi.debug.xcconfig"; sourceTree = "<group>"; };
 		B200D1FD1EEDB1FE003A42E3 /* QSIntroduceReadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QSIntroduceReadCell.swift; sourceTree = "<group>"; };
 		B200D1FE1EEDB1FE003A42E3 /* QSIntroduceReadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QSIntroduceReadCell.xib; sourceTree = "<group>"; };
@@ -565,7 +568,6 @@
 		B2B4BA0B1E7EA4A8000CC201 /* RateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateView.swift; sourceTree = "<group>"; };
 		B2B4BA0C1E7EA4A8000CC201 /* V2FPSLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2FPSLabel.swift; sourceTree = "<group>"; };
 		B2B4BA0D1E7EA4A8000CC201 /* XYCActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYCActionSheet.swift; sourceTree = "<group>"; };
-		B2B4BA0F1E7EA4A8000CC201 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2B4BA111E7EA4A8000CC201 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2B4BA121E7EA4A8000CC201 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		B2B4BA141E7EA4A8000CC201 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -1122,10 +1124,11 @@
 				B2B4BBDC1E7EA4AB000CC201 /* ViewController.swift */,
 				B2B4BA121E7EA4A8000CC201 /* Config.swift */,
 				B2B4B9F81E7EA4A8000CC201 /* Assets.xcassets */,
-				B2B4BA0E1E7EA4A8000CC201 /* LaunchScreen.storyboard */,
 				B2B4BA101E7EA4A8000CC201 /* Main.storyboard */,
+				79D657B01FB48BFC002DC2BD /* LaunchScreen.storyboard */,
 				B2B4BA211E7EA4A8000CC201 /* Info.plist */,
 				B2B4BBDD1E7EA4AB000CC201 /* zhuishushenqi-Bridge-Header.h */,
+				79D657AB1FB48AE6002DC2BD /* Images.xcassets */,
 			);
 			path = zhuishushenqi;
 			sourceTree = "<group>";
@@ -1729,6 +1732,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2B4BC1F1E7EA4AB000CC201 /* TopicDetailCell.xib in Resources */,
+				79D657AC1FB48AE6002DC2BD /* Images.xcassets in Resources */,
 				B2B4BC111E7EA4AB000CC201 /* TopDetailCell.xib in Resources */,
 				B200D2221EEE44AB003A42E3 /* QSLaunchRecView.xib in Resources */,
 				B2795BE71EAE49B200D210A8 /* TXTReader.storyboard in Resources */,
@@ -1736,10 +1740,10 @@
 				B2B4BC0B1E7EA4AB000CC201 /* CategoryCell.xib in Resources */,
 				B22A8D451EAD976000C7E978 /* QSDiscussCell.xib in Resources */,
 				B2B02E621EA9F54700A6880A /* QSBookListViewCell.xib in Resources */,
+				79D657B11FB48BFD002DC2BD /* LaunchScreen.storyboard in Resources */,
 				B278AA941F395FA4000A0D55 /* QSHelpViewCell.xib in Resources */,
 				B2B4BBF11E7EA4AB000CC201 /* Main.storyboard in Resources */,
 				B2B4BC501E7EA4AB000CC201 /* UserfulCell.xib in Resources */,
-				B2B4BBF01E7EA4AB000CC201 /* LaunchScreen.storyboard in Resources */,
 				B2B4BC381E7EA4AB000CC201 /* Chapters.json in Resources */,
 				B2B4BC361E7EA4AB000CC201 /* ChapterInfo.json in Resources */,
 				B20D74171EED83690034516F /* QSLastIntroduceCell.xib in Resources */,
@@ -2130,14 +2134,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B2B4BA0E1E7EA4A8000CC201 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B2B4BA0F1E7EA4A8000CC201 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		B2B4BA101E7EA4A8000CC201 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
