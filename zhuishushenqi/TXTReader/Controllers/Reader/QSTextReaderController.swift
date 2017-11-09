@@ -328,8 +328,8 @@ extension QSTextReaderController:UIPageViewControllerDataSource,UIPageViewContro
     
     func brightnessChange(value: CGFloat) {
         //此处亮度调节是对于手机的，退出app后应还原
-        UIScreen.main.brightness = value
-        setBrightness(value: value)
+//        UIScreen.main.brightness = value
+//        setBrightness(value: value)
     }
     
     func changeSourceClicked() {

@@ -71,6 +71,6 @@ class DZMRMLightView: DZMRMBaseView {
     /// 滑动方法
     @objc private func sliderChanged(_ slider:UISlider) {
         
-        UIScreen.main.brightness = CGFloat(slider.value)
+//        UIScreen.main.brightness = CGFloat(slider.value)
     }
 }
