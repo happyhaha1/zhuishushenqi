@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class QSBookDetailRouter: QSBookDetailWireframeProtocol {
     
@@ -30,9 +31,8 @@ class QSBookDetailRouter: QSBookDetailWireframeProtocol {
     }
     
     func presentReading(model:[ResourceModel],booDetail:BookDetail){
-        let url = Bundle.main.url(forResource: "求魔", withExtension: "txt")
         
-        DZMReadParser.ParserLocalURL(url: url!) {[weak self] (readModel) in
+        DZMReadParser.ParserBookDetail(bookDetail: booDetail) {[weak self] (readModel) in
             
             let readController = DZMReadController()
             

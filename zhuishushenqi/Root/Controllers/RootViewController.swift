@@ -43,13 +43,13 @@ class RootViewController: UIViewController {
         tableView.estimatedSectionHeaderHeight = self.kHeaderViewHeight
         tableView.sectionFooterHeight = CGFloat.leastNonzeroMagnitude
         tableView.qs_registerCellClass(SwipableCell.self)
-        if #available(iOS 11.0, *) {
-            tableView.contentInsetAdjustmentBehavior = .never
-            tableView.estimatedRowHeight = 0
-            tableView.estimatedSectionHeaderHeight = 0
-            tableView.estimatedSectionFooterHeight = 0
-
-        }
+//        if #available(iOS 11.0, *) {
+//            tableView.contentInsetAdjustmentBehavior = .never
+//            tableView.estimatedRowHeight = 0
+//            tableView.estimatedSectionHeaderHeight = 0
+//            tableView.estimatedSectionFooterHeight = 0
+//
+//        }
         let refresh = PullToRefresh(height: 50, position: .top, tip: "正在刷新")
 
         tableView.addPullToRefresh(refresh, action: {
@@ -227,16 +227,18 @@ extension RootViewController:UITableViewDataSource,UITableViewDelegate{
         SVProgressHUD.show()
         let book = self.bookShelfArr![indexPath.row]
         DZMReadParser.ParserBookDetail(bookDetail: book)  {[weak self] (readModel) in
-            
+
             SVProgressHUD.dismiss()
-            
+
             let readController = DZMReadController()
-            
+
             readController.readModel = readModel
-            
+
             self?.navigationController?.pushViewController(readController, animated: true)
         }
-
+//        self.present(QSTextRouter.createModule(bookDetail:self.bookShelfArr![indexPath.row],callback: { (book:BookDetail) in
+//            self.updateShelfArr(book: book)
+//        }), animated: true, completion: nil)
     }
     
     func updateShelfArr(book:BookDetail){
@@ -252,12 +254,18 @@ extension RootViewController:UITableViewDataSource,UITableViewDelegate{
             }
         }
     }
-//        //来源
-//        //        http://api.zhuishushenqi.com/btoc?view=summary&book=51d11e782de6405c45000068
-//        let cell:SwipableCell? = self.tableView.cellForRow(at: indexPath) as? SwipableCell
-//        let allChapterUrl = "\(BASEURL)/toc"
-//        requestAllChapters(withUrl: allChapterUrl,param:["view":"summary","book":cell?.model?._id ?? ""],index: indexPath.row)
-//    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "删除"
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+//            SVProgressHUD.show()
+        }
+    }
 }
 
 extension RootViewController:ComnunityDelegate{

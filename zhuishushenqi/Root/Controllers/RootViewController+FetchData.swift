@@ -171,9 +171,9 @@ extension RootViewController{
     }
     
     func reachabilityChanged(_ no:Notification){
-        let reachability = no.object as! Reachability
+//        let reachability = no.object as! Reachability
         DispatchQueue.main.async {
-            self.typeOfNetwork(type: reachability.networkType)
+//            self.typeOfNetwork(type: reachability.networkType)
         }
     }
     
