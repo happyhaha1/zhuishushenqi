@@ -9,6 +9,7 @@
 import UIKit
 import QSNetwork
 import QSPullToRefresh
+import SVProgressHUD
 
 let AllChapterUrl = "http://api.zhuishushenqi.com/ctoc/57df797cb061df9e19b8b030"
 
@@ -216,12 +217,11 @@ extension RootViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
      
-//        MBProgressHUD.showMessage("本地文件第一次解析慢,以后就会秒进了")
-        
+        SVProgressHUD.show()
         let book = self.bookShelfArr![indexPath.row]
         DZMReadParser.ParserBookDetail(bookDetail: book)  {[weak self] (readModel) in
             
-//            MBProgressHUD.hide()
+            SVProgressHUD.dismiss()
             
             let readController = DZMReadController()
             

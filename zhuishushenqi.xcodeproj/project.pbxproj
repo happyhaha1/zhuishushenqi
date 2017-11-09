@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		48103378801B43EB177B7D8A /* Pods_zhuishushenqi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D606ED88FDF674D404EC160E /* Pods_zhuishushenqi.framework */; };
-		794BEDC31FB31CCD00A50874 /* 求魔.txt in Resources */ = {isa = PBXBuildFile; fileRef = 794BEDC01FB31CCC00A50874 /* 求魔.txt */; };
 		794BEE041FB31EA500A50874 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDC81FB31EA500A50874 /* UIDevice+Extension.swift */; };
 		794BEE051FB31EA500A50874 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDC91FB31EA500A50874 /* NSObject+Extension.swift */; };
 		794BEE061FB31EA500A50874 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BEDCA1FB31EA500A50874 /* UIView+Extension.swift */; };
@@ -54,6 +53,7 @@
 		7963720A1FB2C52900D576E4 /* QSPullToRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B278AAE41F3967A4000A0D55 /* QSPullToRefresh.framework */; };
 		7963720B1FB2C53D00D576E4 /* QSPullToRefresh.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B278AAE41F3967A4000A0D55 /* QSPullToRefresh.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		797817DB1FB4200E007FF493 /* Alamofire+Synchronous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797817DA1FB4200E007FF493 /* Alamofire+Synchronous.swift */; };
+		797817E11FB44392007FF493 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797817E21FB44392007FF493 /* SVProgressHUD.framework */; };
 		B200D1FF1EEDB1FE003A42E3 /* QSIntroduceReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B200D1FD1EEDB1FE003A42E3 /* QSIntroduceReadCell.swift */; };
 		B200D2001EEDB1FE003A42E3 /* QSIntroduceReadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B200D1FE1EEDB1FE003A42E3 /* QSIntroduceReadCell.xib */; };
 		B200D2221EEE44AB003A42E3 /* QSLaunchRecView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B200D2211EEE44AB003A42E3 /* QSLaunchRecView.xib */; };
@@ -346,7 +346,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		794BEDC01FB31CCC00A50874 /* 求魔.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "求魔.txt"; sourceTree = "<group>"; };
 		794BEDC61FB31EA500A50874 /* DZMeBookRead-Bridging-Pch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DZMeBookRead-Bridging-Pch.h"; sourceTree = "<group>"; };
 		794BEDC81FB31EA500A50874 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		794BEDC91FB31EA500A50874 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
@@ -396,6 +395,7 @@
 		794BEE021FB31EA500A50874 /* DZMReadViewUDCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadViewUDCell.swift; sourceTree = "<group>"; };
 		794BEE031FB31EA500A50874 /* DZMReadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZMReadView.swift; sourceTree = "<group>"; };
 		797817DA1FB4200E007FF493 /* Alamofire+Synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Synchronous.swift"; sourceTree = "<group>"; };
+		797817E21FB44392007FF493 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08901F972525F29A370AA86 /* Pods-zhuishushenqi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhuishushenqi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zhuishushenqi/Pods-zhuishushenqi.debug.xcconfig"; sourceTree = "<group>"; };
 		B200D1FD1EEDB1FE003A42E3 /* QSIntroduceReadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QSIntroduceReadCell.swift; sourceTree = "<group>"; };
 		B200D1FE1EEDB1FE003A42E3 /* QSIntroduceReadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QSIntroduceReadCell.xib; sourceTree = "<group>"; };
@@ -669,6 +669,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797817E11FB44392007FF493 /* SVProgressHUD.framework in Frameworks */,
 				7963720A1FB2C52900D576E4 /* QSPullToRefresh.framework in Frameworks */,
 				B2FB92111EB1EEDF000C990A /* CoreTelephony.framework in Frameworks */,
 				B251228D1DB3291A0040CAD3 /* CFNetwork.framework in Frameworks */,
@@ -883,6 +884,7 @@
 		96FE9B86D6BF6F1F079B71F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				797817E21FB44392007FF493 /* SVProgressHUD.framework */,
 				B2FB92101EB1EEDF000C990A /* CoreTelephony.framework */,
 				B251228C1DB3291A0040CAD3 /* CFNetwork.framework */,
 				B22182CE1DA40594002458D2 /* libz.tbd */,
@@ -1106,7 +1108,6 @@
 		B2B4B9F61E7EA4A8000CC201 /* zhuishushenqi */ = {
 			isa = PBXGroup;
 			children = (
-				794BEDC01FB31CCC00A50874 /* 求魔.txt */,
 				794BEDC41FB31EA500A50874 /* DZMeBookRead */,
 				B2B4BD781E7EE284000CC201 /* Client */,
 				B2B4B9F91E7EA4A8000CC201 /* Base */,
@@ -1737,7 +1738,6 @@
 				B2B02E621EA9F54700A6880A /* QSBookListViewCell.xib in Resources */,
 				B278AA941F395FA4000A0D55 /* QSHelpViewCell.xib in Resources */,
 				B2B4BBF11E7EA4AB000CC201 /* Main.storyboard in Resources */,
-				794BEDC31FB31CCD00A50874 /* 求魔.txt in Resources */,
 				B2B4BC501E7EA4AB000CC201 /* UserfulCell.xib in Resources */,
 				B2B4BBF01E7EA4AB000CC201 /* LaunchScreen.storyboard in Resources */,
 				B2B4BC381E7EA4AB000CC201 /* Chapters.json in Resources */,
@@ -1793,6 +1793,7 @@
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PullToRefresh/PullToRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/QSNetwork/QSNetwork.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
@@ -1805,6 +1806,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QSNetwork.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);

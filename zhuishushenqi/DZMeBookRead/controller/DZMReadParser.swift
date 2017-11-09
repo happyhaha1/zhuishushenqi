@@ -9,7 +9,6 @@
 import UIKit
 import CoreText
 import QSNetwork
-import Alamofire
 
 class DZMReadParser: NSObject {
     
@@ -448,11 +447,17 @@ class DZMReadParser: NSObject {
     
     //网络请求所有的章节信息
     class func requestAllChapters(bookDetail: BookDetail) -> [NSDictionary]? {
-        //    let selectedIndex = bookDetail.sourceIndex
+        let selectedIndex = bookDetail.sourceIndex
         //两种情况,1.resources为空，说明第一次打开，直接通过book.id来请求
         //       2.resource不为空，按照resources来请求
-        let api = QSAPI.allChapters(key: bookDetail._id)
-        let url:String = api.path
+        var api = QSAPI.allChapters(key: bookDetail._id)
+        var url:String = api.path
+        if let res = bookDetail.resources {
+            if res.count > selectedIndex {
+                api = QSAPI.allChapters(key: bookDetail.resources?[selectedIndex]._id ?? "")
+                url = api.path
+            }
+        }
         let response = QSNetwork.request(url, method: HTTPMethodType.get, parameters: api.parameters, headers: nil, completionHandler: nil)
         if let mixToc = response.json?["mixToc"] as? NSDictionary {
             if let chapters = mixToc["chapters"] as? [NSDictionary] {

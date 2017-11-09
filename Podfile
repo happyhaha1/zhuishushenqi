@@ -18,6 +18,7 @@ pod 'SnapKit','3.2.0'
 pod 'MBProgressHUD','~> 1.0.0'
 pod 'QSNetwork', '~>0.0.1'
 pod 'Alamofire', '~> 4.5'
+pod 'SVProgressHUD'
 
 
 end
